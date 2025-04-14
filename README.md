@@ -1,4 +1,5 @@
-﻿<!-- Logotipo -->
+﻿<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=005F83&height=120&section=header&text=&fontColor=ffffff&fontSize=35&animation=fadeIn&fontAlignY=35"/>
+<!-- Logotipo -->
 <p align="center">
   <img src="./Assets/supplies.png" width="200" />
   <img src="./Assets/Logo(SemFundo).png" width="350" />
@@ -102,7 +103,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 Aqui estão alguns protótipos de tela do **MiauMigo Shop**:
 
 - **Página Home**:
-![Home](./Assets/home(Figma).png)
+![Home](./Assets/Captura%20de%20tela%202025-03-28%20212416_upscayl_4x_ultrasharp.png)
 
 <img src="./Assets/FFDE59_solid.png" height = "4px" width= "1000">
 
@@ -206,4 +207,4 @@ Aqui estão alguns protótipos de tela do **MiauMigo Shop**:
   </tr>
 </table>
 
-<img src="./Assets/005F83_solid.png" height = "4px" width= "1000">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=552A0F&height=120&section=footer&text=&fontColor=ffffff&fontSize=30&animation=fadeIn&fontAlignY=40"/>
