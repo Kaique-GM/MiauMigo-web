@@ -1,0 +1,259 @@
+.header {
+    background-color: white;
+    height: 106px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    margin-top: 10px;
+    border-radius: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+nav .logo img {
+    height: 180px;
+    width: 180px;
+    margin-top: 11px;
+    cursor: pointer;
+}
+
+
+
+/* Div para alinhar itens no centro */
+
+.center {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+/* Início Seta */
+
+.search-arrow {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #552A0F; /* cor da seta */
+    margin-top: 13px;
+    margin-left: 350px;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+
+/* Esconde a seta quando hover no header ou sub-header */
+.header:hover .arrow-down,
+.sub-header:hover ~ .header .arrow-down {
+    opacity: 0;
+    transition-delay: 0.1s;
+}
+
+/* Fim Seta */
+
+/* Início Search */
+form {
+    display: flex;
+}
+
+.search {
+    position: relative;
+    display: inline-block;
+}
+
+.search img {
+    position: absolute;
+    left: 19px;
+    top: 48%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    /* Ícone não interfere com clique */
+
+}
+
+input {
+    height: 40px;
+    width: 500px;
+    border-radius: 30px;
+    border: 1px solid #F8F9FA;
+    background-color: #F8F9FA;
+    color: #552A0F;
+    font-size: 16px;
+    margin-left: 20px;
+    /* Espaço entre o logo e a barra de pesquisa */
+    padding: 10px 10px 10px 45px;
+    /* espaço à esquerda pro ícone search */
+    cursor: pointer;
+}
+
+input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    /* Remove o x padrão */
+}
+
+input::placeholder {
+    color: #552A0F;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Fim Search */
+
+/* Div para alinhar itens na direita */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Início Botão Anunciar */
+
+.btn-anunciar {
+    background: linear-gradient(to right, #0079A1, #005F83);
+    color: #FFDE59;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-left: 20px;
+}
+
+.btn-anunciar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* fim Botão Anunciar */
+
+/* Início icons */
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-img {
+    width: 31px;
+    height: 31px;
+}
+
+.icon-img-car {
+    margin-top: 5px;
+    width: 31px;
+    height: 31px;
+}
+
+.icon .count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #D9A441;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+.icon .count-car {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #D9A441;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* fim icons */
+
+/* Início User icon */
+
+.user-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Fim User icon */
+
+/* Início sub-header */
+.sub-header {
+    background-color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 100px 100px;
+    width: 50%;
+    margin: auto;
+    margin-top: auto;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.sub-header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-header li a {
+    text-decoration: none;
+    color: #552A0F;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header:hover+.sub-header,
+.sub-header:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+.header:not(:hover)+.sub-header:not(:hover) {
+    transition-delay: 0.3s;
+}
+
+/* Fim sub-header */
