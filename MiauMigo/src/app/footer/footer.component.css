@@ -1,0 +1,182 @@
+.footer {
+    background-color: #005F83;
+    color: #FFDE59;
+    padding: 10px 0;
+    text-align: center;
+    height: 240px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Esquerda */
+
+.footer-left .social-media li {
+    display: inline;
+}
+
+.footer-left .social-media img {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.footer-left .social-media img :hover {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.footer-left {
+    width: 340px;
+    text-align: left;
+}
+
+.footer-left a {
+    margin-top: 10px;
+    color: #FFDE59;
+    font-size: 13px;
+
+}
+
+.footer-left p {
+    opacity: 80%;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.footer-left h1 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Fim Esquerda */
+
+/* Centro */
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer img {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.footer-center .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    /* Menor distância entre os links */
+}
+
+.footer-center .footer-links li {
+    display: inline;
+}
+
+.footer-center .footer-links a {
+    color: #FFDE59;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-center .footer-links a:hover {
+    color: #D9A441;
+    text-decoration: underline;
+
+}
+
+
+/* Fim Centro */
+
+/* Direita */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 300px;
+    /* Definindo uma largura fixa */
+}
+
+
+.footer-right label {
+    color: #FFDE59;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-right input{
+    padding: 3px;
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+    margin-bottom: 5px;
+    background-color: #0079A1;
+    border: 1px solid #0079A1;
+    color: #552A0F;
+}
+
+input::placeholder {
+    color: #552A0F;
+}
+
+input:focus {
+    outline: none;
+}
+
+.footer-right button {
+    background: linear-gradient(to right, #FFDE59, #D9A441);
+    color: #552A0F;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-left: 20px;
+}
+
+.footer-right button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.footer-right .support {
+    margin-top: 10px;
+}
+
+.footer-right .support p {
+    color: #FFDE59;
+    font-size: 14px;
+}
+
+.footer-right .support a {
+    color: #FFDE59;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-right .support a:hover {
+    text-decoration: underline;
+}
+
+/* Fim Direita */

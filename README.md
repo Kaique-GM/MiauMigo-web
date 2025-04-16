@@ -1,9 +1,9 @@
 ﻿<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=005F83&height=120&section=header&text=&fontColor=ffffff&fontSize=35&animation=fadeIn&fontAlignY=35"/>
 <!-- Logotipo -->
 <p align="center">
-  <img src="./Assets/supplies.png" width="200" />
-  <img src="./Assets/Logo(SemFundo).png" width="350" />
-  <img src="./Assets/food.png" width="200" />
+  <img src="./MiauMigo/public/supplies.png" width="200" />
+  <img src="./MiauMigo/public/Logo(SemFundo).png" width="350" />
+  <img src="./MiauMigo/public/food.png" width="200" />
 </p>
 <div align="center">
 
@@ -16,7 +16,7 @@
 
 🐶 🐱 **MiauMigo** é um e-commerce do setor pet que conecta empresas e consumidores, impulsionando negócios e apoiando ONGs de resgate animal por meio da destinação de parte dos lucros. 🐾✨
 
-<img src="./Assets/FFDE59_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/FFDE59_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -29,7 +29,7 @@
 
 🚧🛠️ **Em desenvolvimento...** 🐾  
 
-<img src="./Assets/005F83_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/005F83_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -43,7 +43,7 @@
 
 Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do setor pet, fortalecendo a conexão entre empresas e consumidores, impulsionando o crescimento sustentável desse mercado e apoiando ONGs de resgate animal por meio da destinação de parte dos lucros. 🐕📱🐈  
 
-<img src="./Assets/FA7268_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -59,7 +59,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 🐾💙🛒 O **Miguamigo Shop** é mais do que um e-commerce pet; é uma ponte entre empresas e consumidores, incentivando a transformação digital e apoiando a causa animal para um futuro mais conectado e solidário.
 
 
-<img src="./Assets/D9A441_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/D9A441_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -73,7 +73,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
-<img src="./Assets/552A0F_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/552A0F_solid.png" height = "4px" width= "1000">
 
 
 <!-- ------------------ -->
@@ -89,7 +89,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
 
-<img src="./Assets/005F83_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/005F83_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -103,9 +103,9 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 Aqui estão alguns protótipos de tela do **MiauMigo Shop**:
 
 - **Página Home**:
-![Home](./Assets/Captura%20de%20tela%202025-03-28%20212416_upscayl_4x_ultrasharp.png)
+![Home](MiauMigo/public/home(Figma).png)
 
-<img src="./Assets/FFDE59_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/FFDE59_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -119,7 +119,7 @@ Aqui estão alguns protótipos de tela do **MiauMigo Shop**:
 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
-<img src="./Assets/FA7268_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
