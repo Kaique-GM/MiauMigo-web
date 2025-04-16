@@ -4,6 +4,7 @@
     padding: 10px 0;
     text-align: center;
     height: 240px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-container {
@@ -16,24 +17,27 @@
 }
 
 /* Esquerda */
+.footer .pata_logo {
+    height: 50px;
+    width: 50px;
+    margin-right: -10px;
+    margin-bottom: 5px;
+}
 
 .footer-left .social-media li {
     display: inline;
 }
 
 .footer-left .social-media img {
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 50%;
+    width: 35px;
+    height: 35px;
     margin-top: 10px;
-    margin-left: 25px;
+    margin-left: -30px;
+    margin-bottom: 5px;
 }
 
 .footer-left .social-media img :hover {
     cursor: pointer;
-    width: 24px;
-    height: 24px;
 }
 
 .footer-left {
@@ -55,9 +59,13 @@
 }
 
 .footer-left h1 {
+    display: flex;
+    align-items: center;
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: -15px;
+    margin-left: -15px;
     font-size: 14px;
+    font-weight: bold;
 }
 
 /* Fim Esquerda */
@@ -74,6 +82,7 @@
     height: 200px;
     width: 200px;
     cursor: pointer;
+    margin-bottom: -25px;
 }
 
 .footer-center .footer-links {
@@ -111,10 +120,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 300px;
-    /* Definindo uma largura fixa */
+    width: 350px;
 }
-
 
 .footer-right label {
     color: #FFDE59;
@@ -122,7 +129,29 @@
     margin-bottom: 5px;
 }
 
-.footer-right input{
+.footer-right .newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+    width: 100%;
+    max-width: 350px;
+    /* Define um limite, ajustável */
+}
+
+.newsletter label {
+    align-self: center;
+    color: #FFDE59;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+}
+
+.newsletter button {
+    margin-right: 80px;
+}
+
+.footer-right input {
     padding: 3px;
     border-radius: 25px;
     border: none;
@@ -177,6 +206,26 @@ input:focus {
 
 .footer-right .support a:hover {
     text-decoration: underline;
+}
+
+.footer-right .payment {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.footer-right .payment li {
+    list-style: none;
+}
+
+.footer-right .payment img {
+    width: 75px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+
 }
 
 /* Fim Direita */
