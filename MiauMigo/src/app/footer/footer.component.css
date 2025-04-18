@@ -208,12 +208,14 @@ input:focus {
 .footer-right .support p {
     color: #FFDE59;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .footer-right .support a {
     color: #FFDE59;
     text-decoration: none;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .footer-right .support a:hover {
@@ -245,6 +247,16 @@ input:focus {
     right: 10px;
     object-fit: cover;
     z-index: -1;
+    opacity: 0.7;
+}
+
+.backgroundPatinhas-form {
+    position: absolute;
+    right: -19px;
+    bottom: -5px;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.7;
 }
 
 .invalid {
