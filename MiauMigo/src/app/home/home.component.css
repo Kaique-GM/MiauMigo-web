@@ -20,8 +20,8 @@
 
   .compre-aqui-btn {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 22%;
+    left: 3%;
     background: linear-gradient(to right, #552A0F, #7F4A2F);
     color: #FFDE59;
     border: none;
@@ -30,8 +30,9 @@
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     z-index: 2;
+    text-decoration: none;
   }
   
   .compre-aqui-btn:hover {
