@@ -1,6 +1,7 @@
 .header {
     background-color: white;
     height: 106px;
+    max-width: 1400px;
     width: 100%;
     align-items: center;
     text-align: center;
@@ -8,9 +9,20 @@
     justify-content: space-between;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Sombra */
-    margin-top: 10px;
+    margin: auto;
     border-radius: 100px;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .header {
+        max-width: 90%;  /* Para telas menores, reduz o tamanho máximo */
+        padding: 0 20px;  /* Adiciona padding para manter o conteúdo distante das bordas */
+    }
 }
 
 nav {
@@ -222,6 +234,8 @@ input:focus {
     width: 50%;
     margin: auto;
     margin-top: auto;
+    position: relative;
+    z-index: 1;
 
     opacity: 0;
     visibility: hidden;

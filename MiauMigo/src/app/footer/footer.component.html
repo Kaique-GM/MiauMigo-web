@@ -6,9 +6,11 @@
             <p>Conectamos você aos melhores petshops, oferecendo produtos e serviços de qualidade para o seu pet com
                 todo o carinho e praticidade.</p>
             <ul class="social-media">
-                <li><a href="https://github.com/Kaique-GM/MiauMigo-web" target="_blank"><img src="github_logo.png" alt="github"></a></li>
+                <li><a href="https://github.com/Kaique-GM/MiauMigo-web" target="_blank"><img src="github_logo.png"
+                            alt="github"></a></li>
             </ul>
             <p>&copy; MiauMigo Shop 2025. Todos os direitos reservados.</p>
+            <img src="footer.png" alt="patinhas" class="backgroundPatinhas">
         </div>
 
         <!-- Centro -->
@@ -21,13 +23,22 @@
                     <li><a href="/contact">Contato</a></li>
                 </ul>
             </div>
+            <img src="footer_1.png" alt="patinhas" class="backgroundPatinhas-center-2">
+            <img src="footer.png" alt="patinhas" class="backgroundPatinhas-center">
         </div>
 
         <!-- Direita -->
         <div class="footer-right">
-            <form class="newsletter">
+            <form class="newsletter" #form="ngForm" (ngSubmit)="enviarNewsletter()">
                 <label for="email">Receba novidades:</label>
-                <input type="email" id="email" placeholder="Seu e-mail">
+                <input type="email" name="email" [(ngModel)]="email" required email placeholder="Seu E-mail">
+
+                <div *ngIf="form.submitted && form.controls['email'].errors" class="invalid">
+                    <div *ngIf="form.controls['email'].errors['email']">
+                        Email inválido!
+                    </div>
+                </div>
+
                 <button type="submit">Enviar</button>
             </form>
             <div class="support">
@@ -40,6 +51,9 @@
                 <li><img src="mastercard.png" alt="master"></li>
                 <li><img src="paypal.png" alt="paypal"></li>
             </ul>
+            <img src="footer.png" alt="patinhas" class="backgroundPatinhas-right">
+
         </div>
     </div>
+
 </footer>

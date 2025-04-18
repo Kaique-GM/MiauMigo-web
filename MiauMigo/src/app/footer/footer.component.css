@@ -3,15 +3,17 @@
     color: #FFDE59;
     padding: 10px 0;
     text-align: center;
-    height: 240px;
+    height: auto;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
+    z-index: 0;
+    position: relative;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -41,8 +43,10 @@
 }
 
 .footer-left {
-    width: 340px;
+    width: 400px;
     text-align: left;
+    z-index: 0;
+    position: relative;
 }
 
 .footer-left a {
@@ -68,21 +72,31 @@
     font-weight: bold;
 }
 
+.backgroundPatinhas {
+    position: absolute;
+    top: 5px;
+    left: 35px;
+    object-fit: cover;
+    z-index: -1;
+}
+
 /* Fim Esquerda */
 
 /* Centro */
 
 .footer-center {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 35px;
+    z-index: 0;
+    position: relative;
 }
 
 .footer img {
     height: 200px;
     width: 200px;
     cursor: pointer;
-    margin-bottom: -25px;
+    margin-bottom: -15px;
 }
 
 .footer-center .footer-links {
@@ -91,7 +105,6 @@
     margin: 0;
     display: flex;
     gap: 10px;
-    /* Menor distância entre os links */
 }
 
 .footer-center .footer-links li {
@@ -111,6 +124,22 @@
 
 }
 
+.backgroundPatinhas-center {
+    position: absolute;
+    top: 5px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.backgroundPatinhas-center-2 {
+    position: absolute;
+    top: 5px;
+    right: 50%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
 
 /* Fim Centro */
 
@@ -119,37 +148,20 @@
 .footer-right {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     width: 350px;
-}
+    z-index: 0;
+    position: relative;
 
-.footer-right label {
-    color: #FFDE59;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.footer-right .newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: auto;
-    width: 100%;
-    max-width: 350px;
-    /* Define um limite, ajustável */
 }
 
 .newsletter label {
-    align-self: center;
     color: #FFDE59;
     font-size: 14px;
     margin-bottom: 5px;
-    margin-left: 100px;
+    align-items: center;
 }
 
-.newsletter button {
-    margin-right: 80px;
-}
 
 .footer-right input {
     padding: 3px;
@@ -190,7 +202,7 @@ input:focus {
 }
 
 .footer-right .support {
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .footer-right .support p {
@@ -213,7 +225,6 @@ input:focus {
     gap: 10px;
     align-items: center;
     margin-top: -10px;
-    margin-bottom: 20px;
 }
 
 .footer-right .payment li {
@@ -226,6 +237,18 @@ input:focus {
     object-fit: contain;
     display: block;
 
+}
+
+.backgroundPatinhas-right {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.invalid {
+    color: red;
 }
 
 /* Fim Direita */
