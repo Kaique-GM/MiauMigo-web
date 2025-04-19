@@ -102,7 +102,17 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
   
 
 - **Página Home**:
-![Home](MiauMigo/public/print_home.png)
+<div align="center">
+  <img src="MiauMigo/public/print_home.png" width="30%" />
+  <img src="MiauMigo/public/print_home4.png" width="30%" />
+  <img src="MiauMigo/public/print_home1.png" width="30%" />
+</div>
+
+<div align="center">
+  <img src="MiauMigo/public/print_home5.png" width="45%" />
+</div>
+
+
 
 <img src="./MiauMigo/public/FFDE59_solid.png" height = "4px" width= "1000">
 
