@@ -100,10 +100,9 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 </div>
   
-Aqui estão alguns protótipos de tela do **MiauMigo Shop**:
 
 - **Página Home**:
-![Home](MiauMigo/public/home(Figma).png)
+![Home](MiauMigo/public/print_home.png)
 
 <img src="./MiauMigo/public/FFDE59_solid.png" height = "4px" width= "1000">
 
