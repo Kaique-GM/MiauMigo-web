@@ -120,10 +120,12 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 ## 🖥️ Tecnologias Utilizadas
 
+![HTML](https://img.shields.io/badge/HTML-FF5722?style=for-the-badge&logo=html5&logoColor=white) 
+![CSS](https://img.shields.io/badge/CSS-2196F3?style=for-the-badge&logo=css3&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-C3002F?style=for-the-badge&logo=angular&logoColor=white)
+![BootStrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white) 
 
 </div>
-
-🚧🛠️ **Em desenvolvimento...** 🐾 
 
 <img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
 
