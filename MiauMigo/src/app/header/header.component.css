@@ -67,7 +67,7 @@ nav .logo img {
     border-right: 8px solid transparent;
     border-top: 10px solid #552A0F; /* cor da seta */
     margin-top: 13px;
-    margin-left: 350px;
+    margin-left: 295px;
     transition: opacity 0.3s ease;
     opacity: 1;
 }
