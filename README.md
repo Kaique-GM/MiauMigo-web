@@ -100,8 +100,6 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 </div>
   
-
-- **Página Home**:
 <div align="center">
   <img src="./MiauMigo/public/print_home.png" style="display: block; margin: 0; padding: 0;" />
   <img src="./MiauMigo/public/print_home4.png" style="display: block; margin: 0; padding: 0;" />
