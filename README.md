@@ -14,7 +14,8 @@
 
 </div>
 
-🐶 🐱 **MiauMigo** é um e-commerce do setor pet que conecta empresas e consumidores, impulsionando negócios e apoiando ONGs de resgate animal por meio da destinação de parte dos lucros. 🐾✨
+🐶🐱 MiauMigo é um e-commerce inovador voltado ao universo pet, que conecta empresas do setor a consumidores apaixonados por seus animais. Além de impulsionar negócios, o projeto tem um propósito social: parte dos lucros é destinada ao apoio de ONGs que resgatam e cuidam de animais em situação de vulnerabilidade. 🐾💛
+Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e solidariedade. ✨
 
 <img src="./MiauMigo/public/FFDE59_solid.png" height = "4px" width= "1000">
 
@@ -41,8 +42,8 @@
 
 </div>
 
-Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do setor pet, fortalecendo a conexão entre empresas e consumidores, impulsionando o crescimento sustentável desse mercado e apoiando ONGs de resgate animal por meio da destinação de parte dos lucros. 🐕📱🐈  
-
+Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) 🏪🐾 do setor pet 🐶🐱, fortalecendo a conexão 💬🤝 entre empresas e consumidores 🛍️❤️ por meio de uma plataforma acessível e eficiente 📱💻.
+A proposta busca impulsionar o crescimento sustentável 🌱📈 desse mercado, ao mesmo tempo em que promove o impacto social 🌍🐕‍🦺, destinando parte dos lucros 💸💛 ao apoio de ONGs que resgatam e cuidam de animais em situação de vulnerabilidade 🐾🏠✨.
 <img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
@@ -54,10 +55,8 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 </div>
 
-🚧🛠️ **Em desenvolvimento...** 🐾 
-
-🐾💙🛒 O **Miguamigo Shop** é mais do que um e-commerce pet; é uma ponte entre empresas e consumidores, incentivando a transformação digital e apoiando a causa animal para um futuro mais conectado e solidário.
-
+🐾💙🛒 Miguamigo Shop é mais do que um simples e-commerce pet — é uma ponte entre empresas 🏪 e consumidores 🐶👩‍💻, promovendo a transformação digital 📲 e fortalecendo o mercado pet com empatia e inovação.
+O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de resgate animal 🐕‍🦺🏠, unindo propósito, tecnologia e solidariedade para construir um futuro mais conectado e humano. 🌐💞🐾
 
 <img src="./MiauMigo/public/D9A441_solid.png" height = "4px" width= "1000">
 
