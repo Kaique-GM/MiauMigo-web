@@ -42,15 +42,10 @@ Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e
 
 </div>
 
-<<<<<<< HEAD
-Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do setor pet, fortalecendo a conexão entre empresas e consumidores, impulsionando o crescimento sustentável desse mercado e apoiando ONGs de resgate animal por meio da destinação de parte dos lucros. 🐕📱🐈  
-
-<img src="./MiauMigo/public/Readme/FA7268_solid.png" height = "4px" width= "1000">
-=======
 Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) 🏪🐾 do setor pet 🐶🐱, fortalecendo a conexão 💬🤝 entre empresas e consumidores 🛍️❤️ por meio de uma plataforma acessível e eficiente 📱💻.
 A proposta busca impulsionar o crescimento sustentável 🌱📈 desse mercado, ao mesmo tempo em que promove o impacto social 🌍🐕‍🦺, destinando parte dos lucros 💸💛 ao apoio de ONGs que resgatam e cuidam de animais em situação de vulnerabilidade 🐾🏠✨.
-<img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
->>>>>>> 9d8cfc627e547033503446167adbb1543960b999
+<img src="./MiauMigo/public/Readme/FA7268_solid.png" height = "4px" width= "1000">
+
 
 <!-- ------------------ -->
 
@@ -130,13 +125,9 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
 
 </div>
 
-<<<<<<< HEAD
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
 <img src="./MiauMigo/public/Readme/FA7268_solid.png" height = "4px" width= "1000">
-=======
-<img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
->>>>>>> 9d8cfc627e547033503446167adbb1543960b999
 
 <div align="center">
 
