@@ -1,9 +1,9 @@
 ﻿<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=005F83&height=120&section=header&text=&fontColor=ffffff&fontSize=35&animation=fadeIn&fontAlignY=35"/>
 <!-- Logotipo -->
 <p align="center">
-  <img src="./MiauMigo/public/supplies.png" width="200" />
-  <img src="./MiauMigo/public/Logo(SemFundo).png" width="350" />
-  <img src="./MiauMigo/public/food.png" width="200" />
+  <img src="./MiauMigo/public/Readme/supplies.png" width="200" />
+  <img src="./MiauMigo/public/Icons/Logo(SemFundo).png" width="350" />
+  <img src="./MiauMigo/public/Readme/food.png" width="200" />
 </p>
 <div align="center">
 
@@ -16,7 +16,7 @@
 
 🐶 🐱 **MiauMigo** é um e-commerce do setor pet que conecta empresas e consumidores, impulsionando negócios e apoiando ONGs de resgate animal por meio da destinação de parte dos lucros. 🐾✨
 
-<img src="./MiauMigo/public/FFDE59_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/FFDE59_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -29,7 +29,7 @@
 
 🚧🛠️ **Em desenvolvimento...** 🐾  
 
-<img src="./MiauMigo/public/005F83_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/005F83_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -43,7 +43,7 @@
 
 Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do setor pet, fortalecendo a conexão entre empresas e consumidores, impulsionando o crescimento sustentável desse mercado e apoiando ONGs de resgate animal por meio da destinação de parte dos lucros. 🐕📱🐈  
 
-<img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/FA7268_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -59,7 +59,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 🐾💙🛒 O **Miguamigo Shop** é mais do que um e-commerce pet; é uma ponte entre empresas e consumidores, incentivando a transformação digital e apoiando a causa animal para um futuro mais conectado e solidário.
 
 
-<img src="./MiauMigo/public/D9A441_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/D9A441_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -73,7 +73,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
-<img src="./MiauMigo/public/552A0F_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/552A0F_solid.png" height = "4px" width= "1000">
 
 
 <!-- ------------------ -->
@@ -89,7 +89,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
 
-<img src="./MiauMigo/public/005F83_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/005F83_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -103,15 +103,15 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 - **Página Home**:
 <div align="center">
-  <img src="./MiauMigo/public/print_home.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./MiauMigo/public/print_home4.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./MiauMigo/public/print_home1.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./MiauMigo/public/print_home5.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./MiauMigo/public/Readme/print_home.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./MiauMigo/public/Readme/print_home4.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./MiauMigo/public/Readme/print_home1.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./MiauMigo/public/Readme/print_home5.png" style="display: block; margin: 0; padding: 0;" />
 </div>
 
 
 
-<img src="./MiauMigo/public/FFDE59_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/FFDE59_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -125,7 +125,7 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) do 
 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
-<img src="./MiauMigo/public/FA7268_solid.png" height = "4px" width= "1000">
+<img src="./MiauMigo/public/Readme/FA7268_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 

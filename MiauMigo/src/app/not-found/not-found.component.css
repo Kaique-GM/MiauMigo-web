@@ -1,0 +1,90 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #552A0F;
+  margin: 0;
+  padding: 0;
+}
+
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 600px;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #005F83;
+  margin: 20px 0 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.cat img {
+  height: 250px;
+  width: 250px;
+}
+
+.btn-home {
+  background: linear-gradient(to right, #0079A1, #005F83);
+  color: #FFDE59;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 20px;
+}
+
+.btn-home:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.paw {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 350px;
+  width: auto;
+  opacity: 0.6;
+}
+
+.left-paw {
+  left: 10px;
+}
+
+.right-paw {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .paw {
+    height: 100px;
+    opacity: 0.4;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .btn-home {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}

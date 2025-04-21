@@ -1,0 +1,340 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #552A0F;
+}
+
+.sobre-nos {
+  margin-top: -75px;
+  position: relative;
+  z-index: 0;
+}
+
+.imagem-container {
+  position: relative;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagem-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo para a seção "Sobre Nosso Projeto" */
+.sobre-projeto {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.patinha-esquerda {
+  position: absolute;
+  bottom: 10%;
+  left: -25%;
+  height: 200px;
+  width: auto;
+}
+
+.patinha-direita {
+  position: absolute;
+  right: -10%;
+  bottom: -45%;
+  height: 200px;
+  width: auto;
+  transform: rotate(-45deg);
+}
+
+.sobre-projeto h2 {
+  color: #552A0F;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.paragrafos {
+  color: #552A0F;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.paragrafos p {
+  flex: 1;
+  min-width: 300px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.metricas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.metrica {
+  width: 180px;
+  height: 180px;
+  background-image: url('/Icons/coracao_1.png');
+  background-size: 370px 370px;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metrica h3 {
+  color: #FFDE59;
+  font-size: 1.5rem;
+  margin: -1px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.metrica p {
+  color: #FFDE59;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 50px;
+  z-index: 1;
+}
+
+.nossa-equipe {
+  color: #552A0F;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.nossa-equipe h2 {
+  position: relative;
+  display: inline-block;
+  padding: 30px 60px;
+  background: linear-gradient(135deg, #FA7268, #FDB99B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: -25px;
+}
+
+
+.pata_3 {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 50%;
+  left: -150%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.osso_4 {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 30%;
+  left: -6;
+  transform: translate(-100%, -50%) rotate(-45deg);
+}
+
+.coracao {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  top: -15%;
+  left: 85%;
+  transform: translateX(-50%);
+}
+
+.nossa-equipe {
+  position: relative;
+}
+
+.membros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+}
+
+.membro {
+  width: 300px;
+  height: 400px;
+  background-color: rgb(250, 114, 104, 0.8);
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.membro:hover {
+  transform: scale(1.05);
+}
+
+.membro img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.membro h4 {
+  color: #005F83;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 5px;
+  margin-bottom: -1px;
+}
+
+.membro p {
+  color: #005F83;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.img_dog {
+  position: absolute;
+  left: -100px;
+  top: 80%;
+  transform: translateY(-50%) rotate(45deg);
+  height: 250px;
+  width: 250px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.testimonials {
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.titulo-comentarios {
+  text-align: center;
+}
+
+.testimonials h4 {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 30px 60px;
+  background: linear-gradient(135deg, #005F83, #4CAAC2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: -25px;
+}
+
+.osso_3 {
+  height: 100px;
+  width: 100px;
+  left: 40%;
+  transform: translate(-100%, -50%) rotate(-45deg);
+  position: absolute;
+
+}
+
+.osso_5 {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: 28%;
+  transform: translate(-85%, -40%) rotate(45deg);
+}
+
+.testimonials h2 {
+  margin: 0 0 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  padding-right: 20px;
+}
+
+#t-1:checked~.slides #slide1,
+#t-2:checked~.slides #slide2 {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.text {
+  width: 55%;
+}
+
+.text .stars {
+  color: #fbc900;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.text .name {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 4px solid #552A0F;
+  margin-left: 20px;
+}
+
+
+.nav-btn {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #552A0F;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#t-1:checked~.navigation label[for="t-1"],
+#t-2:checked~.navigation label[for="t-2"],
+#t-3:checked~.navigation label[for="t-3"] {
+  background: #D9A441;
+}
