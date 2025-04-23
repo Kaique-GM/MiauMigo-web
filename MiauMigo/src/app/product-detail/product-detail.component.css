@@ -1,0 +1,176 @@
+.product-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.product-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.racao-title {
+    color: #D9A441; /* Nova cor para "Ração" */
+    display: flex; /* Para alinhar a imagem ao lado do texto */
+    align-items: center; /* Alinhar verticalmente */
+    gap: 0.5rem; /* Espaço entre o texto e a imagem */
+}
+
+.buy-button {
+    background-color: #f2b100;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex; /* Para alinhar a imagem ao lado do texto */
+    align-items: center; /* Alinhar verticalmente */
+    gap: 0.5rem; /* Espaço entre o texto e a imagem */
+    justify-content: center; /* Centralizar o conteúdo (texto e imagem) */
+}
+
+.rating-stars {
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 1rem;
+}
+.star.filled {
+    color: gold;
+}
+
+.product-details h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.supplier {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.comments-section {
+    margin-top: 2rem;
+}
+
+.comment-title {
+    color: #D9A441; /* Nova cor para "Comente Aqui:" */
+    margin-bottom: 1rem; /* Adicione um pouco de espaço abaixo do título */
+}
+
+.comment-box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.comment-box input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.comment-box button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.user-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-rating .star {
+    font-size: 16px;
+    color: gray;
+}
+.comment-rating .star.filled {
+    color: gold;
+}
+
+.icon {
+    width: 20px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    vertical-align: middle; /* Alinhar verticalmente com o texto */
+}
+
+.icon-button {
+    width: 18px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    vertical-align: middle; /* Alinhar verticalmente com o texto */
+}
+
+.imagem-aleatoria {
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    position: absolute; /* Permite posicionar a imagem fora do fluxo normal */
+    z-index: 10; /* Garante que a imagem fique acima de outros elementos, se necessário */
+}
+
+.pata-flutuante {
+    bottom: 200%;
+    left: 80%;
+    width: 75px;
+}
+
+.osso-flutuante {
+    bottom: -90px;
+    left: -7%;
+    transform: rotate(15deg); /* Opcional: rotaciona a imagem */
+    width: 250px;
+}
+
+.gato-flutuante {
+    top: 554px;
+    right: -200px;
+    width: 120px; /* Ajuste o tamanho do gato */
+}
+
+.gato {
+    position: absolute;
+      left: -575px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      height: 250px;
+      width: 250px;
+      z-index: 0;
+      pointer-events: none;
+}
+
+ .cachorro-baixo {
+    top: 473px;
+    right: 950px;
+    width: 250px; /* Ajuste o tamanho do cachorro */
+}
