@@ -4,7 +4,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive , FormsModule],
+  imports: [RouterLink, RouterLinkActive, FormsModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -21,12 +21,13 @@ export class HeaderComponent {
 
   search() {
     console.log('Imagem clicada!');
-    if (this.filter) {
-      this.router.navigate(['/shop'], { queryParams: { search: this.filter } });
-    }else{
+    if (!this.filter.trim()) {
       this.router.navigate(['/shop']);
+    } else {
+      this.router.navigate(['/shop'], { queryParams: { search: this.filter } });
     }
-
+    
+    this.filter = '';
   }
 
 }

@@ -9,7 +9,7 @@
     <!-- Lista de produtos filtrados -->
     <div class="products-grid">
 
-        <div *ngIf="noProductsFound" class="no-products-message">
+        <div *ngIf="filteredProducts.length === 0 && filter.trim()" class="no-products-message">
             <p>Desculpe, não encontramos nenhum produto com essa pesquisa.</p>
         </div>
 

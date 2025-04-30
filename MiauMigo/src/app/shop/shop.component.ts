@@ -11,8 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ShopComponent implements OnInit {
   filter: string = '';
-  noProductsFound: boolean = false;
-
+  
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -34,16 +33,7 @@ export class ShopComponent implements OnInit {
       return this.produtos;
     }
     else {
-      const filtered = this.produtos.filter(p => p.name.toLowerCase().includes(this.filter.toLowerCase()));
-
-      if (filtered.length === 0) {
-        this.noProductsFound = true;
-      } else {
-        this.noProductsFound = false;
-      }
-
-      return filtered;
-
+      return this.produtos.filter(p => p.name.toLowerCase().includes(this.filter.toLowerCase()));
     }
 
   }
