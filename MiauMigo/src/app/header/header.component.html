@@ -6,12 +6,11 @@
         <div class="center">
             <div class="search-arrow">
                 <div class="search">
-                    <img src="/Header/search_icon.png" alt="Logo">
-                    <input type="search" placeholder="Pesquisar...">
+                    <img src="/Header/search_icon.png" alt="Logo" (click)="search()">
+                    <input [(ngModel)]="filter" type="search" placeholder="Pesquisar..." (keyup.enter)="search()">
                 </div>
                 <div class="arrow-down"></div>
             </div>
-            <button (click)="anunciar()" class="btn-anunciar">Anuncie aqui</button>
         </div>
         <div class="right">
 
@@ -35,8 +34,11 @@
 
 <div class="sub-header">
     <ul>
-        <li class="nav-item"><a routerLink="home" routerLinkActive="active" class="nav-link" aria-current="page">Home</a></li>
-        <li class="nav-item"><a routerLink="shop" routerLinkActive="active" class="nav-link" aria-current="page">Shop</a></li>
-        <li class="nav-item"><a routerLink="about" routerLinkActive="active" class="nav-link" aria-current="page">Quem Somos</a></li>
+        <li class="nav-item"><a routerLink="home" routerLinkActive="active" class="nav-link"
+                aria-current="page">Home</a></li>
+        <li class="nav-item"><a routerLink="shop" routerLinkActive="active" class="nav-link"
+                aria-current="page">Shop</a></li>
+        <li class="nav-item"><a routerLink="about" routerLinkActive="active" class="nav-link" aria-current="page">Quem
+                Somos</a></li>
     </ul>
 </div>

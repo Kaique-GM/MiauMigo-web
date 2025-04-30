@@ -1,1 +1,23 @@
-<p>shop works!</p>
+<!-- catalog.component.html -->
+
+<div class="catalog-container">
+    <h2>Catálogo de Produtos</h2>
+
+    <!-- Campo de busca -->
+    <input type="text" placeholder="Buscar produto..." [(ngModel)]="filter" class="search-input" />
+
+    <!-- Lista de produtos filtrados -->
+    <div class="products-grid">
+
+        <div *ngIf="noProductsFound" class="no-products-message">
+            <p>Desculpe, não encontramos nenhum produto com essa pesquisa.</p>
+        </div>
+
+        <div class="product-card" *ngFor="let product of filteredProducts">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.description }}</p>
+            <span class="price">R$ {{ product.price | number: '1.2-2' }}</span>
+            <button>Ver mais</button>
+        </div>
+    </div>
+</div>

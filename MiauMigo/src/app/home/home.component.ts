@@ -14,4 +14,8 @@ export class HomeComponent {
   comprar() {
     this.router.navigate(['/shop']);
   }
+
+  anunciar(){
+    this.router.navigate(['/anunciar']);
+  }
 }

@@ -65,9 +65,8 @@ nav .logo img {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 10px solid #552A0F; /* cor da seta */
+    border-top: 10px solid #552A0F;
     margin-top: 13px;
-    margin-left: 295px;
     transition: opacity 0.3s ease;
     opacity: 1;
 }
@@ -99,8 +98,7 @@ form {
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    pointer-events: none;
-    /* Ícone não interfere com clique */
+    cursor: pointer;
 
 }
 
