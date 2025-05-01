@@ -12,29 +12,11 @@
         <h2><img src="/Icons/osso_2.png" alt="" class="osso_2">Explore por Categorias<img src="/Icons/pata_2.png" alt=""
                 class="pata_2"></h2>
         <div class="cards-container-categ">
-            <div class="card-categ">
-                <img src="/Home/img_acessorios.jpeg" alt="Categoria 1">
+            <div class="card-categ" *ngFor=" let categoria of categorias">
+                <img [src]="categoria.Image" alt="">
                 <img src="/Icons/seta_1.png" alt="" class="setas">
-                <h3>Acessórios </h3>
-                <p>84 Produtos</p>
-            </div>
-            <div class="card-categ">
-                <img src="/Home/img_racoes.jpeg" alt="Categoria 2">
-                <img src="/Icons/seta_1.png" alt="" class="setas">
-                <h3>Rações</h3>
-                <p>64 Produtos</p>
-            </div>
-            <div class="card-categ">
-                <img src="/Home/img_camas.jpeg" alt="Categoria 3">
-                <img src="/Icons/seta_1.png" alt="" class="setas">
-                <h3>Camas e Tocas</h3>
-                <p>22 Produtos</p>
-            </div>
-            <div class="card-categ">
-                <img src="/Home/img_higiene.jpeg" alt="Categoria 4">
-                <img src="/Icons/seta_1.png" alt="" class="setas">
-                <h3>Higiene e Cuidados</h3>
-                <p>16 Produtos</p>
+                <h3>{{categoria.nome}}</h3>
+                <p>{{categoria.quant}} Produtos</p>
             </div>
         </div>
     </section>
@@ -49,23 +31,11 @@
             <img src="/Icons/coracao.png" alt="" class="coracao">
         </h2>
         <div class="cards-container-premium">
-            <div class="card-premium">
-                <img src="/Home/food+_1.jpeg" alt="Premium 1">
+            <div class="card-premium" *ngFor="let premium of linha_premium">
+                <img [src]="premium.Image" alt="">
                 <img src="/Icons/setas_coracao.png" alt="" class="setas">
-                <h3>Ração Premium para Cães</h3>
-                <p>R$ 49,99</p>
-            </div>
-            <div class="card-premium">
-                <img src="/Home/food+_2.jpeg" alt="Premium 2">
-                <img src="/Icons/setas_coracao.png" alt="" class="setas">
-                <h3>Combo Ração Premium para Cães</h3>
-                <p>R$ 84,99</p>
-            </div>
-            <div class="card-premium">
-                <img src="/Home/food+_3.jpeg" alt="Premium 3">
-                <img src="/Icons/setas_coracao.png" alt="" class="setas">
-                <h3>Ração Premium para Gatos</h3>
-                <p>R$ 39,99</p>
+                <h3>{{premium.nome}}</h3>
+                <p>{{premium.preco}}</p>
             </div>
         </div>
     </section>
@@ -78,53 +48,11 @@
         <h2>Sucesso de Vendas</h2>
         <img src="/Icons/coracao_1.png" alt="" class="coracao_1">
         <div class="cards-container-sucess">
-            <div class="card-sucess">
-                <img src="/Home/brinquedo_cat_1.jpeg" alt="Sucesso 1">
+            <div class="card-sucess" *ngFor="let top of top_vendas">
+                <img [src]="top.Image" alt="">
                 <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Peixinho Fofo</h3>
-                <p>R$ 9,99</p>
-            </div>
-            <div class="card-sucess">
-                <img src="/Home/img_pote_Cat.jpeg" alt="Sucesso 2">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Pote para gatos</h3>
-                <p>R$ 15,99</p>
-            </div>
-            <div class="card-sucess">
-                <img src="/Home/brinquedo_cat_2.jpeg" alt="Sucesso 3">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Caça Ativa</h3>
-                <p>R$ 9,99</p>
-            </div>
-            <div class="card-sucess">
-                <img src="/Home/brinquedo_dog_2.jpeg" alt="Sucesso 4">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Hidrante Divertido</h3>
-                <p>R$ 9,99</p>
-            </div>
-            <div class="card-sucess">
-                <img src="/Home/briquendo_dog_1.jpeg" alt="Sucesso 5">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Osso Divertido</h3>
-                <p>R$ 10,99</p>
-            </div>
-            <div class="card-sucess">
-                <img src="/Home/caminha_Cat.jpeg" alt="Sucesso 6">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Caminha para gatos</h3>
-                <p>R$ 59,99</p>
-            </div>
-            <div class="card-sucess">
-                <img src="/Home/img_pote_dog.jpeg" alt="Sucesso 7">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Pote para cachorros</h3>
-                <p>R$ 19,99</p>
-            </div>
-            <div class="card-sucess">
-                <img src="/Home/cama_dog.jpg" alt="Sucesso 8">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
-                <h3>Caminha para cachorros</h3>
-                <p>R$ 79,99</p>
+                <h3>{{top.nome}}</h3>
+                <p>{{top.preco}}</p>
             </div>
         </div>
     </section>

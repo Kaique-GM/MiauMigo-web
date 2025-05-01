@@ -25,7 +25,6 @@ export class ShopComponent implements OnInit {
     { id: 2, name: 'Brinquedo Mordedor', description: 'Ideal para cães pequenos', price: 29.90, imagem: 'assets/caminha.jpg' },
     { id: 3, name: 'Areia Higiênica', description: 'Para gatos', price: 49.90, imagem: 'assets/caminha.jpg' },
     { id: 4, name: 'Caminha Pet', preco: 120.00, description: 'Para gatos', imagem: 'assets/caminha.jpg', },
-
   ];
 
   get filteredProducts() {
