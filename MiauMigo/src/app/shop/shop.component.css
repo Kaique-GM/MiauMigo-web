@@ -1,83 +1,65 @@
-/* catalog.component.css */
+.setas {
+  height: 40px !important;
+  width: 40px !important;
+  position: absolute;
+  right: 5px;
+  margin-top: 7px;
+}
 
-.catalog-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    font-family: Arial, sans-serif;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  
-  .search-input {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-  }
-  
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .product-card {
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 1.25rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  }
-  
-  .product-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: #222;
-  }
-  
-  .product-card p {
-    flex-grow: 1;
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-  
-  .price {
-    font-weight: bold;
-    color: #D9A441;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  button {
-    padding: 0.6rem 1rem;
-    background-color: #D9A441;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #b9892c;
-  }
-  
+/* Cards Produtos */
+.cards-container {
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cards {
+  width: 345px;
+  height: 400px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards img {
+  width: 100%;
+  height: 320px;
+  object-fit: fill;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: block;
+}
+
+.cards h3 {
+  text-align: left;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: 15px;
+  color: #552A0F;
+  font-weight: bold;
+}
+
+.cards p {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #552A0F;
+  font-weight: bold;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

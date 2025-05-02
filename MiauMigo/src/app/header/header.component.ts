@@ -20,7 +20,6 @@ export class HeaderComponent {
 
 
   search() {
-    console.log('Imagem clicada!');
     if (!this.filter.trim()) {
       this.router.navigate(['/shop']);
     } else {

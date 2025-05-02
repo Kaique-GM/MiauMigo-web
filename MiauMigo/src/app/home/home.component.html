@@ -12,7 +12,7 @@
         <h2><img src="/Icons/osso_2.png" alt="" class="osso_2">Explore por Categorias<img src="/Icons/pata_2.png" alt=""
                 class="pata_2"></h2>
         <div class="cards-container-categ">
-            <div class="card-categ" *ngFor=" let categoria of categorias">
+            <div class="card-categ" *ngFor=" let categoria of categorias" (click)="shop(categoria.categoria)">
                 <img [src]="categoria.Image" alt="">
                 <img src="/Icons/seta_1.png" alt="" class="setas">
                 <h3>{{categoria.nome}}</h3>

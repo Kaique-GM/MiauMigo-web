@@ -13,28 +13,30 @@ export class HomeComponent {
 
   constructor(private router: Router) { }
 
+  category: string = '';
+
   categorias = [
-    { nome: "Acessórios", quant: 84, Image: "/Home/img_acessorios.jpeg" },
-    { nome: "Rações", quant: 64, Image: "/Home/img_racoes.jpeg" },
-    { nome: "Camas e Tocas", quant: 22, Image: "/Home/img_camas.jpeg" },
-    { nome: "Higiene e Cuidados", quant: 16, Image: "/Home/img_higiene.jpeg" },
+    { nome: "Acessórios", categoria: "acessorio", quant: 84, Image: "/Home/img_acessorios.jpeg" },
+    { nome: "Rações", categoria: "racoes", quant: 64, Image: "/Home/img_racoes.jpeg" },
+    { nome: "Camas e Tocas", categoria: "camas", quant: 22, Image: "/Home/img_camas.jpeg" },
+    { nome: "Higiene e Cuidados", categoria: "higiene", quant: 16, Image: "/Home/img_higiene.jpeg" },
   ]
 
   linha_premium = [
-    { nome: "Ração Premium para Cães", preco: "R$ 49,99", Image: "/Home/food+_1.jpeg" },
-    { nome: "Combo Ração Premium para Cães", preco: "R$ 84,99", Image: "/Home/food+_2.jpeg" },
-    { nome: "Ração Premium para Gatos", preco: "R$ 39,99", Image: "/Home/food+_3.jpeg" },
+    { id: 1, nome: "Ração Premium para Cães", preco: "R$ 49,99", categoria: "racoes", Image: "/Home/food+_1.jpeg" },
+    { id: 2, nome: "Combo Ração Premium para Cães", preco: "R$ 84,99", categoria: "racoes", Image: "/Home/food+_2.jpeg" },
+    { id: 3, nome: "Ração Premium para Gatos", preco: "R$ 39,99", categoria: "racoes", Image: "/Home/food+_3.jpeg" },
   ]
 
   top_vendas = [
-    { nome: "Peixinho Fofo", preco: "R$ 9,99", Image: "/Home/brinquedo_cat_1.jpeg" },
-    { nome: "Pote para gatos", preco: "R$ 15,99", Image: "/Home/img_pote_Cat.jpeg" },
-    { nome: "Caça Ativa", preco: "R$ 9,99", Image: "/Home/brinquedo_cat_2.jpeg" },
-    { nome: "Hidrante Divertido", preco: "R$ 9,99", Image: "/Home/brinquedo_dog_2.jpeg" },
-    { nome: "Osso Divertido", preco: "R$ 10,99", Image: "/Home/briquendo_dog_1.jpeg" },
-    { nome: "Caminha para gatos", preco: "R$ 59,99", Image: "/Home/caminha_Cat.jpeg" },
-    { nome: "Pote para cachorros", preco: "R$ 19,99", Image: "/Home/img_pote_dog.jpeg" },
-    { nome: "Caminha para cachorros", preco: "R$ 79,99", Image: "/Home/cama_dog.jpg" },
+    { id: 4, nome: "Peixinho Fofo", preco: "R$ 9,99", categoria: "acessorio", Image: "/Home/brinquedo_cat_1.jpeg" },
+    { id: 5, nome: "Pote para gatos", preco: "R$ 15,99", categoria: "acessorio", Image: "/Home/img_pote_Cat.jpeg" },
+    { id: 6, nome: "Caça Ativa", preco: "R$ 9,99", categoria: "acessorio", Image: "/Home/brinquedo_cat_2.jpeg" },
+    { id: 7, nome: "Hidrante Divertido", preco: "R$ 9,99", categoria: "acessorio", Image: "/Home/brinquedo_dog_2.jpeg" },
+    { id: 8, nome: "Osso Divertido", preco: "R$ 10,99", categoria: "acessorio", Image: "/Home/briquendo_dog_1.jpeg" },
+    { id: 9, nome: "Caminha para gatos", preco: "R$ 59,99", categoria: "camas", Image: "/Home/caminha_Cat.jpeg" },
+    { id: 10, nome: "Pote para cachorros", preco: "R$ 19,99", categoria: "acessorio", Image: "/Home/img_pote_dog.jpeg" },
+    { id: 11, nome: "Caminha para cachorros", preco: "R$ 79,99", categoria: "camas", Image: "/Home/cama_dog.jpg" },
   ]
 
   comprar() {
@@ -43,5 +45,13 @@ export class HomeComponent {
 
   anunciar() {
     this.router.navigate(['/anunciar']);
+  }
+
+  shop(categoria: string) {
+    this.category = categoria
+    this.router.navigate(['/shop'], { queryParams: { category: this.category } });
+
+    this.category = '';
+
   }
 }

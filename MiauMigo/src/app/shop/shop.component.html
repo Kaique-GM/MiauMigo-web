@@ -3,21 +3,32 @@
 <div class="catalog-container">
     <h2>Catálogo de Produtos</h2>
 
+    <div class="category-filters">
+        <div class="categories" *ngFor="let categoria of categorias">
+            <button (click)="selectedCategory(categoria.categoria)"> {{categoria.nome}}</button>
+        </div>
+    </div>
+
     <!-- Campo de busca -->
     <input type="text" placeholder="Buscar produto..." [(ngModel)]="filter" class="search-input" />
 
     <!-- Lista de produtos filtrados -->
     <div class="products-grid">
 
-        <div *ngIf="filteredProducts.length === 0 && filter.trim()" class="no-products-message">
+        <div *ngIf="filtered.length === 0 && filter.trim()" class="no-products-message">
             <p>Desculpe, não encontramos nenhum produto com essa pesquisa.</p>
         </div>
+        <div *ngIf="filtered.length === 0 && category.trim()" class="no-products-message">
+            <p>Desculpe, não encontramos nenhum produto com categoria.</p>
+        </div>
 
-        <div class="product-card" *ngFor="let product of filteredProducts">
-            <h3>{{ product.name }}</h3>
-            <p>{{ product.description }}</p>
-            <span class="price">R$ {{ product.price | number: '1.2-2' }}</span>
-            <button>Ver mais</button>
+        <div class="cards-container">
+            <div class="cards" *ngFor="let produto of filtered">
+                <img [src]="produto.Image" alt="">
+                <img src="/Icons/setas_coracao_3.png" alt="" class="setas">
+                <h3>{{produto.nome}}</h3>
+                <p>{{produto.preco}}</p>
+            </div>
         </div>
     </div>
 </div>
