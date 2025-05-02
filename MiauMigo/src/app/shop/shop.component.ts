@@ -23,25 +23,28 @@ export class ShopComponent implements OnInit {
   }
 
   categorias = [
-    { nome: "Acessórios", categoria: "acessorio" },
-    { nome: "Rações", categoria: "racoes" },
-    { nome: "Camas e Tocas", categoria: "camas" },
-    { nome: "Higiene e Cuidados", categoria: "higiene" },
+    { nome: "Higiene e Cuidados", categoria: "higiene", img: "/Shop/sapo.png" },
+    { nome: "Rações", categoria: "racoes", img: "/Shop/dog_food.png" },
+    { nome: "Todas", categoria: "", img: "/Icons/cat.png" },
+    { nome: "Acessórios", categoria: "acessorio", img: "/Home/furao.png" },
+    { nome: "Camas e Tocas", categoria: "camas", img: "/Shop/sleep_bird.png" },
   ]
 
   produtos = [
-    { id: 1, nome: "Ração Premium para Cães", preco: "R$ 49,99", categoria: "racoes", Image: "/Home/food+_1.jpeg" },
-    { id: 2, nome: "Combo Ração Premium para Cães", preco: "R$ 84,99", categoria: "racoes", Image: "/Home/food+_2.jpeg" },
-    { id: 3, nome: "Ração Premium para Gatos", preco: "R$ 39,99", categoria: "racoes", Image: "/Home/food+_3.jpeg" },
-    { id: 4, nome: "Peixinho Fofo", preco: "R$ 9,99", categoria: "acessorio", Image: "/Home/brinquedo_cat_1.jpeg" },
-    { id: 5, nome: "Pote para gatos", preco: "R$ 15,99", categoria: "acessorio", Image: "/Home/img_pote_Cat.jpeg" },
-    { id: 6, nome: "Caça Ativa", preco: "R$ 9,99", categoria: "acessorio", Image: "/Home/brinquedo_cat_2.jpeg" },
-    { id: 7, nome: "Hidrante Divertido", preco: "R$ 9,99", categoria: "acessorio", Image: "/Home/brinquedo_dog_2.jpeg" },
-    { id: 8, nome: "Osso Divertido", preco: "R$ 10,99", categoria: "acessorio", Image: "/Home/briquendo_dog_1.jpeg" },
-    { id: 9, nome: "Caminha para gatos", preco: "R$ 59,99", categoria: "camas", Image: "/Home/caminha_Cat.jpeg" },
-    { id: 10, nome: "Pote para cachorros", preco: "R$ 19,99", categoria: "acessorio", Image: "/Home/img_pote_dog.jpeg" },
-    { id: 11, nome: "Caminha para cachorros", preco: "R$ 79,99", categoria: "camas", Image: "/Home/cama_dog.jpg" },
+    { id: 12, nome: "Garrafa Portátil de Água para Pets", preco: "R$ 29,99", categoria: "acessorio", Image: "/Shop/produtos/acc_3.jpeg" },
+    { id: 13, nome: "Cama Redonda Luxo para Gatos", preco: "R$ 69,90", categoria: "camas", Image: "/Shop/produtos/cama_1.jpeg" },
+    { id: 14, nome: "Ração Úmida para Gatos", preco: "R$ 7,50", categoria: "racoes", Image: "/Shop/produtos/racao_2.jpeg" },
+    { id: 15, nome: "Coleira com GPS para Cães", preco: "R$ 89,90", categoria: "acessorio", Image: "/Shop/produtos/acc_1.jpeg" },
+    { id: 16, nome: "Cama Portátil para Viagens", preco: "R$ 59,90", categoria: "camas", Image: "/Shop/produtos/cama_4.jpeg" },
+    { id: 17, nome: "Brinquedo Inteligente para Gatos", preco: "R$ 25,00", categoria: "acessorio", Image: "/Shop/produtos/acc_2.jpeg" },
+    { id: 18, nome: "Ração Natural para Cães Adultos", preco: "R$ 52,99", categoria: "racoes", Image: "/Shop/produtos/racao_1.jpeg" },
+    { id: 19, nome: "Cama com Cobertura para Cães", preco: "R$ 89,99", categoria: "camas", Image: "/Shop/produtos/cama_2.jpeg" },
+    { id: 20, nome: "Coleira Estampada para Gatos", preco: "R$ 14,99", categoria: "acessorio", Image: "/Shop/produtos/acc_4.jpeg" },
+    { id: 21, nome: "Caminha Térmica para Inverno", preco: "R$ 99,99", categoria: "camas", Image: "/Shop/produtos/cama_3.jpeg" },
+    { id: 22, nome: "Ração Light para Gatos Castrados", preco: "R$ 45,90", categoria: "racoes", Image: "/Shop/produtos/racao_4.jpeg" },
+    { id: 23, nome: "Snack Saudável para Cães", preco: "R$ 12,99", categoria: "racoes", Image: "/Shop/produtos/racao_3.jpeg" }
   ];
+  
 
   selectedCategory(categoriaSelecionada: string) {
     this.filter = '';

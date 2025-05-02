@@ -1,26 +1,64 @@
 <!-- catalog.component.html -->
 
 <div class="catalog-container">
-    <h2>Catálogo de Produtos</h2>
+    <div class="title">
+        <img src="/Footer/footer.png" alt="Patinhas esquerda" class="paw left-paw">
+        <h2><img src="/Icons/coracao_1.png" alt="" class="coracao"> Navegue por Categoria <img src="/Icons/search.png"
+                alt="" class="search_icon"></h2>
 
-    <div class="category-filters">
-        <div class="categories" *ngFor="let categoria of categorias">
-            <button (click)="selectedCategory(categoria.categoria)"> {{categoria.nome}}</button>
-        </div>
+        <img src="/Footer/footer_1.png" alt="Patinhas direita" class="paw right-paw">
     </div>
 
-    <!-- Campo de busca -->
-    <input type="text" placeholder="Buscar produto..." [(ngModel)]="filter" class="search-input" />
+    <div class="category-filters">
+        <div class="categories" *ngFor="let selectedCategoria of categorias">
+            <div class="category-wrapper">
+                <img *ngIf="category === selectedCategoria.categoria" [src]="selectedCategoria.img"
+                    class="selected-icon" alt="decorativo" />
+
+                <button (click)="selectedCategory(selectedCategoria.categoria)"
+                    [ngClass]="{ 'selected': category === selectedCategoria.categoria }">
+                    {{ selectedCategoria.nome }}
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Lista de produtos filtrados -->
     <div class="products-grid">
 
-        <div *ngIf="filtered.length === 0 && filter.trim()" class="no-products-message">
-            <p>Desculpe, não encontramos nenhum produto com essa pesquisa.</p>
+        <!-- Se não achar nenhuma busca -->
+        <div *ngIf="filtered.length === 0 && filter.trim()" class="not-found">
+            <img src="/Footer/footer.png" alt="Patinhas esquerda" class="paw_1 left-paw_1">
+
+            <div class="container_error">
+                <div class="cat">
+                    <img src="/Icons/sad_cat.png" alt="Gatinho triste">
+                </div>
+                <h1>Sem resultados</h1>
+                <p>Oops! Nada encontrado para sua pesquisa.</p>
+                <p>Esse pet correu rápido demais... tente buscar de outro jeito! 🐾🔍</p>
+            </div>
+
+            <img src="/Footer/footer_1.png" alt="Patinhas direita" class="paw_1 right-paw_1">
+
+
         </div>
-        <div *ngIf="filtered.length === 0 && category.trim()" class="no-products-message">
-            <p>Desculpe, não encontramos nenhum produto com categoria.</p>
+
+        <!-- Se não achar nenhum produto na categoria -->
+        <div *ngIf="filtered.length === 0 && category.trim()" class="not-found">
+            <img src="/Footer/footer.png" alt="Patinhas esquerda" class="paw_1 left-paw_1">
+            <div class="container_error">
+                <div class="cat">
+                    <img src="/Icons/sad_cat.png" alt="Gatinho triste">
+                </div>
+                <h1>Nenhum produto</h1>
+                <p>Oops! Não encontramos nada nessa categoria.</p>
+                <p>Parece que esse pet se escondeu... tente outra categoria! 🐱‍👤📦</p>
+            </div>
+
+            <img src="/Footer/footer_1.png" alt="Patinhas direita" class="paw_1 right-paw_1">
         </div>
+
 
         <div class="cards-container">
             <div class="cards" *ngFor="let produto of filtered">

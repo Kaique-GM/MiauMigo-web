@@ -1,3 +1,112 @@
+/* Title */
+.catalog-container h2 {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(to right, #005F83, #0077A8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 70px;
+}
+
+.coracao {
+  position: absolute;
+  top: -45px;
+  left: 34.5%;
+  height: 95px;
+  width: 95px;
+  transform: rotate(-35deg);
+}
+
+.search_icon {
+  position: absolute;
+  top: -35px;
+  right: 33%;
+  height: 100px;
+  width: 100px;
+}
+
+.paw {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: auto;
+  opacity: 0.6;
+}
+
+.left-paw {
+  left: 10px;
+}
+
+.right-paw {
+  right: 10px;
+}
+
+/* Filtros por Categoria */
+
+.category-filters {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+.category-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.categories button {
+  position: relative;
+  z-index: 2;
+  background: white;
+  color: #552A0F;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.categories button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.categories button.selected {
+  background: linear-gradient(to right, #005F83, #2D9CDB);
+  color: #FFDE59;
+}
+
+.selected-icon {
+  position: absolute;
+  z-index: 1;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  /* Inicialmente 30px abaixo do botão */
+  width: 85px;
+  height: 85px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(28px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Corações dos cards */
 .setas {
   height: 40px !important;
   width: 40px !important;
@@ -62,4 +171,56 @@
 .cards:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+/* Sem Resultados */
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.container_error {
+  z-index: 1;
+}
+
+.container_error h1 {
+  font-size: 2rem;
+  color: #005F83;
+  margin: 20px 0 10px;
+}
+
+.container_error p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.cat img {
+  height: 150px;
+  width: 150px;
+}
+
+.paw_1 {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  height: 250px;
+  width: auto;
+  opacity: 0.6;
+}
+
+.left-paw_1 {
+  left: 10px;
+  transform: rotate(-160deg);
+}
+
+.right-paw_1 {
+  right: 10px;
+  transform: rotate(120deg);
 }
