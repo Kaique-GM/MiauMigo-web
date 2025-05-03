@@ -31,7 +31,7 @@
             <img src="/Icons/coracao.png" alt="" class="coracao">
         </h2>
         <div class="cards-container-premium">
-            <div class="card-premium" *ngFor="let premium of linha_premium">
+            <div class="card-premium" *ngFor="let premium of linha_premium" (click)="buy(premium)">
                 <img [src]="premium.Image" alt="">
                 <img src="/Icons/setas_coracao.png" alt="" class="setas">
                 <h3>{{premium.nome}}</h3>
@@ -48,7 +48,7 @@
         <h2>Sucesso de Vendas</h2>
         <img src="/Icons/coracao_1.png" alt="" class="coracao_1">
         <div class="cards-container-sucess">
-            <div class="card-sucess" *ngFor="let top of top_vendas">
+            <div class="card-sucess" *ngFor="let top of top_vendas" (click)="buy(top)">
                 <img [src]="top.Image" alt="">
                 <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
                 <h3>{{top.nome}}</h3>

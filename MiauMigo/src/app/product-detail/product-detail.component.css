@@ -1,176 +1,252 @@
-.product-container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
-    font-family: Arial, sans-serif;
-    position: relative;
-}
+ body {
+     font-family: 'Poppins', sans-serif;
+ }
 
-.product-header {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
+ /* Produto Infos */
 
-.product-image {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-}
+ .product-container {
+    z-index: 1;
+     display: flex;
+     justify-content: center;
+     max-width: 100%;
+     margin-top: -25px;
+ }
 
-.product-info {
-    flex: 1;
-}
+ .product {
+     display: flex;
+     background-color: #ffffffe9;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     padding: 20px;
+     border-radius: 12px;
+     max-width: 1200px;
+     width: 100%;
+ }
 
-.racao-title {
-    color: #D9A441; /* Nova cor para "Ração" */
-    display: flex; /* Para alinhar a imagem ao lado do texto */
-    align-items: center; /* Alinhar verticalmente */
-    gap: 0.5rem; /* Espaço entre o texto e a imagem */
-}
+ .product-image {
+     flex: 2;
+     width: 100%;
+     max-width: 650px;
+     height: auto;
+     border-radius: 8px;
+     object-fit: cover;
+     margin-right: 30px;
+ }
 
-.buy-button {
-    background-color: #f2b100;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 1rem;
-    display: flex; /* Para alinhar a imagem ao lado do texto */
-    align-items: center; /* Alinhar verticalmente */
-    gap: 0.5rem; /* Espaço entre o texto e a imagem */
-    justify-content: center; /* Centralizar o conteúdo (texto e imagem) */
-}
+ .product-details {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     z-index: 2;
+ }
 
-.rating-stars {
+ .title {
+    z-index: 2;
+     font-size: 28px;
+     margin-bottom: 10px;
+     color: #552A0F;
+     font-weight: bold;
+ }
+
+ .price {
+     font-size: 24px;
+     color: #552A0F;
+     margin-bottom: 20px;
+     font-weight: bold;
+ }
+
+ .description {
+     font-size: 20px;
+     color: #552A0F;
+     margin-bottom: 30px;
+     text-decoration: none;
+ }
+
+ .seller {
+     font-size: 15px;
+     text-align: end;
+     color: #D9A441;
+     margin-bottom: 30px;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ .buttons {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 5px;
+ }
+
+ .buy-button {
+     background: linear-gradient(to right, #005F83, #2D9CDB);
+     color: #FFDE59;
+     border: none;
+     border-radius: 25px;
+     padding: 10px 20px;
+     font-size: 20px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+     text-decoration: none;
+     width: 100%;
+     margin-top: 5px;
+ }
+
+ .buy-button:hover {
+     transform: scale(1.05);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+
+ .stars span {
     font-size: 24px;
-    color: gray;
-    margin-bottom: 1rem;
-}
-.star.filled {
-    color: gold;
-}
+    color: #FFB800; /* cor dourada */
+    margin-right: 2px;
+  }
 
-.product-details h3 {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-}
+  .qualidade {
+    margin-left: 17%;
+    margin-top: 15px;
+    height: 350px;
+    width: 350px;
+  }
 
-.supplier {
+  .pata {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    transform: rotate(-25deg);
+    height: 120px;
+    width: 120px;
+    opacity: 0.4;
+  }
+
+  .osso {
+    position: absolute;
+    left: 55%;
+    margin-top: 600px;
+    transform: rotate(-25deg);
+    height: 120px;
+    width: 120px;
+    opacity: 0.5;
+  }
+
+  .patas {
+    position: absolute;
+    opacity: 0.1;
+    top: 40%;
+    right: 10%;
+    transform: rotate(90deg);
+    z-index: -1;
+  }
+
+  /* Comentários */
+
+  .comments-section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #ffffffe9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .comment-title {
+    font-size: 24px;
+    color: #552A0F;
+    margin-bottom: 10px;
+    text-align: center;
     font-weight: bold;
-    margin-top: 1rem;
-}
-
-.comments-section {
-    margin-top: 2rem;
-}
-
-.comment-title {
-    color: #D9A441; /* Nova cor para "Comente Aqui:" */
-    margin-bottom: 1rem; /* Adicione um pouco de espaço abaixo do título */
-}
-
-.comment-box {
+  }
+  
+  .comment-box {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.comment-box input {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .comment-box input {
     flex: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-.comment-box button {
-    background: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #552A0F;
+    font-size: 16px;
+    outline: none;
+    color: #552A0F;
+  }
+  
+  .comment-box button {
+    background: linear-gradient(to right, #552A0F, #7F4A2F);
+    color: #FFDE59;
     border: none;
-    font-size: 1.5rem;
+    border-radius: 25px;
+    padding: 0 18px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-}
-
-.comment {
+    transition: 0.2s;
+  }
+  
+  .comment-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .comment {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    background: #f9f9f9;
-    padding: 1rem;
-    border-radius: 8px;
-}
-
-.user-img {
-    width: 60px;
-    height: 60px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 183, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .user-img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-}
-
-.comment-content {
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .comment-content {
     flex: 1;
-}
-
-.comment-rating .star {
+  }
+  
+  .comment-content strong {
+    color: #552A0F;
     font-size: 16px;
-    color: gray;
-}
-.comment-rating .star.filled {
-    color: gold;
-}
+  }
+  
+  .comment-content p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #552A0F;
+  }
 
-.icon {
-    width: 20px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    vertical-align: middle; /* Alinhar verticalmente com o texto */
-}
+  /* Fundo */
 
-.icon-button {
-    width: 18px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    vertical-align: middle; /* Alinhar verticalmente com o texto */
-}
-
-.imagem-aleatoria {
-    width: 50px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    position: absolute; /* Permite posicionar a imagem fora do fluxo normal */
-    z-index: 10; /* Garante que a imagem fique acima de outros elementos, se necessário */
-}
-
-.pata-flutuante {
-    bottom: 200%;
-    left: 80%;
-    width: 75px;
-}
-
-.osso-flutuante {
-    bottom: -90px;
-    left: -7%;
-    transform: rotate(15deg); /* Opcional: rotaciona a imagem */
-    width: 250px;
-}
-
-.gato-flutuante {
-    top: 554px;
-    right: -200px;
-    width: 120px; /* Ajuste o tamanho do gato */
-}
-
-.gato {
+  .img_dog {
     position: absolute;
-      left: -575px;
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
-      height: 250px;
-      width: 250px;
-      z-index: 0;
-      pointer-events: none;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    height: 250px;
+    width: 250px;
+    z-index: 0;
+    pointer-events: none;
 }
 
- .cachorro-baixo {
-    top: 473px;
-    right: 950px;
-    width: 250px; /* Ajuste o tamanho do cachorro */
+.img_cat {
+    position: absolute;
+    left: -110px;
+    top: 150%;
+    transform: translateY(-50%) rotate(45deg);
+    height: 250px;
+    width: 250px;
+    z-index: 0;
+    pointer-events: none;
 }

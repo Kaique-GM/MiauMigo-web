@@ -13,7 +13,7 @@ export const routes: Routes = [
     { path: 'shop', component: ShopComponent},
     { path: 'about', component: AboutComponent },
     { path: 'anunciar', component: AnunciarComponent },
-    { path: 'product-detail', component: ProductDetailComponent },
+    { path: 'product-detail/:id', component: ProductDetailComponent },
 
 
     

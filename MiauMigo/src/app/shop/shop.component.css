@@ -1,3 +1,7 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Title */
 .catalog-container h2 {
   position: relative;

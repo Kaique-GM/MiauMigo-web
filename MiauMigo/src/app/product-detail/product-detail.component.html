@@ -1,41 +1,29 @@
-<div class="product-container">
-    <div class="product-header">
-        <img src="/Home/food+_1.jpeg" alt="Produto" class="product-image" />
-        <div class="product-info">
-            <h2 class="racao-title">Ração <img src="/Icons/pata_2.png" alt="Pata" class="icon" /></h2>
-            <p>
-                Descrição do produto com informações gerais sobre a ração.
-            </p>
-            <ul>
-                <li>Benefício 1 do produto</li>
-                <li>Benefício 2 do produto</li>
-                <li>Benefício 3 do produto</li>
-            </ul>
-            <button class="buy-button">Comprar <img src="/Icons/osso_3.png" alt="Osso" class="icon-button" /></button>
-        </div>
-    </div>
-
-    <div class="rating-stars">
-        <span *ngFor="let star of [1,2,3,4,5]; let i = index" class="star" [class.filled]="i < 4">★</span>
-    </div>
+<body>
     <div class="product-container">
-        <img src="/Icons/pata_3.png" alt="Pata" class="imagem-aleatoria pata-flutuante">
-        <img src="/Icons/osso_2.png" alt="Osso" class="imagem-aleatoria osso-flutuante">
-        <img src="/Icons/cat.png" alt="Gato" class="imagem-aleatoria gato-flutuante">
-        <img src="/Home/cat_3.png" alt="gato-flutuante" class="imagem-aleatoria gato">
-        <img src="/Home/dog_2.png" alt="cachorro-flutuante" class="imagem-aleatoria cachorro">
-        <img src="/Home/dog.png" alt="cachorro" class="imagem-aleatoria cachorro-baixo">
-
-
+        <img src="/Home/dog_2.png" alt="" class="img_dog">
+        <div class="product">
+            <img [src]="Image" alt="Produto" class="product-image" />
+            <div class="product-details">
+                <img src="/Icons/pata_5.png" alt="" class="pata">
+                <h2 class="title">{{ nome }}</h2>
+                <p class="price">{{preco}}</p>
+                <a class="description">{{ descricao }}</a>
+                <p class="seller">Vendido por: {{ vendedor }}</p>
+                <div class="stars">
+                    <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                        <span [innerHTML]="star <= nota ? '&#9733;' : '&#9734;'"></span>
+                    </ng-container>
+                </div>
+                <div class="buttons">
+                    <button class="buy-button" (click)="buy()">Comprar</button>
+                </div>
+                <img src="/Icons/qualidade.png" alt="selo" class="qualidade" />
+                <img src="/Icons/osso_5.png" alt="selo" class="osso" />
+                <img src="/Footer/footer_1.png" alt="selo" class="patas" />
+            </div>
         </div>
-
-    <div class="product-details">
-        <h3>Detalhes do produto</h3>
-        <p>
-            Morbi viverra eleifend in cras orci a leo tellus. Nunc purus adipiscing diam...
-        </p>
-        <p class="supplier">Gerald Ferguson<br /><small>Fornecedor</small></p>
     </div>
+    <!-- em testes -->
 
     <div class="comments-section">
         <h3 class="comment-title">Comente Aqui:</h3>
@@ -45,14 +33,18 @@
         </div>
 
         <div class="comment" *ngFor="let comment of comments">
+            <img src="/Home/cat_3.png" alt="" class="img_cat">
             <img src="/ProductDetail/perfil.jpg" alt="User" class="user-img" />
             <div class="comment-content">
                 <strong>{{ comment.name }}</strong>
                 <p>{{ comment.text }}</p>
-                <div class="comment-rating">
-                    <span *ngFor="let star of [1,2,3,4,5]; let i = index" class="star" [class.filled]="i < comment.rating">★</span>
+                <div class="stars">
+                    <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                        <span [innerHTML]="star <= nota ? '&#9733;' : '&#9734;'"></span>
+                    </ng-container>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+</body>

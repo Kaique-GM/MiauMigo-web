@@ -1,20 +1,47 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { StorageService } from '../services/localStorage';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [CommonModule, FormsModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, FormsModule],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })
-export class ProductDetailComponent {
+export class ProductDetailComponent implements OnInit {
+
+  id: number = 0;
+  nome: string = "";
+  preco: string = "";
+  descricao: string = "";
+  Image: string = "";
+  nota: number = 0;
+  vendedor: string = "";
+
+  constructor(private route: ActivatedRoute, private router: Router, private service: StorageService) {
+
+  }
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'] ?? 0;
+
+    const dados = this.service.getLocal('produtoInfo');
+
+    this.nome = dados.nome;
+    this.preco = dados.preco;
+    this.descricao = dados.descricao;
+    this.Image = dados.Image;
+    this.nota = dados.nota;
+    this.vendedor = dados.vendedor;
+  }
+
+
   newComment: string = '';
   comments = [
     {
       name: 'Lívia Fusquini',
-      text: 'Excelente ração! Meus gatos adoram.',
+      text: 'Excelente! Meus pets adoram.',
       rating: 4
     },
     {
@@ -33,5 +60,9 @@ export class ProductDetailComponent {
       });
       this.newComment = '';
     }
+  }
+
+  buy(){
+    this.router.navigate(['**'])
   }
 }
