@@ -1,0 +1,264 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #552A0F;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #552A0F;
+  }
+  
+  .required {
+    color: red;
+    font-weight: normal;
+    margin-left: 4px;
+  }
+  
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #6c4ba0;
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .checkbox-group {
+    margin-top: 10px;
+  }
+  
+  .checkbox-group label {
+    font-weight: normal;
+    margin-left: 5px;
+    color: #552A0F;
+  }
+  
+  small {
+    display: block;
+    color: #552A0F;
+    margin-top: 5px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .row .form-group {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .photo-upload {
+    width: 60px;
+    height: 60px;
+    border: 2px dashed #552A0F;
+    border-radius: 10px;
+    font-size: 32px;
+    color: #552A0F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .photo-upload:hover {
+    border-color: #005F83;
+    color: #005F83;
+  }
+  
+  .submit-button {
+    background-color: #005F83;
+    color: white;     
+    padding: 14px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #2D9CDB;
+  }
+  
+  .center-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .photo-upload {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #552A0F;
+    border-radius: 10px;
+    font-size: 32px;
+    color: #552A0F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .photo-upload:hover {
+    border-color: #005F83;
+    color: #005F83;
+  }
+  .fotos-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .photo-upload {
+    width: 80px;
+    height: 80px;
+    border: 2px dashed #552A0F;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #552A0F;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .photo-upload:hover {
+    border-color: #005F83;
+    color: #005F83;
+  }
+  
+  .photo-upload.add-button {
+    background-image: none;
+  }
+  .foto-preview {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .remove-button {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .remove-button:hover {
+    background: red;
+  }
+  .success-alert {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+  }
+  .success-alert {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .error-alert {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+  }
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #005F83;
+    outline: none;
+  }
+  .input-error {
+    border-color: #e74c3c !important;
+  }
+  
+  .error-text {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  
