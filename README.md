@@ -1,9 +1,9 @@
 ﻿<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=005F83&height=120&section=header&text=&fontColor=ffffff&fontSize=35&animation=fadeIn&fontAlignY=35"/>
 <!-- Logotipo -->
 <p align="center">
-  <img src="./MiauMigo/public/Readme/supplies.png" width="200" />
-  <img src="./MiauMigo/public/Icons/Logo(SemFundo).png" width="350" />
-  <img src="./MiauMigo/public/Readme/food.png" width="200" />
+  <img src="./public/Readme/supplies.png" width="200" />
+  <img src="./public/Icons/Logo(SemFundo).png" width="350" />
+  <img src="./public/Readme/food.png" width="200" />
 </p>
 <div align="center">
 
@@ -17,7 +17,7 @@
 🐶🐱 MiauMigo é um e-commerce inovador voltado ao universo pet, que conecta empresas do setor a consumidores apaixonados por seus animais. Além de impulsionar negócios, o projeto tem um propósito social: parte dos lucros é destinada ao apoio de ONGs que resgatam e cuidam de animais em situação de vulnerabilidade. 🐾💛
 Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e solidariedade. ✨
 
-<img src="./MiauMigo/public/Readme/FFDE59_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/FFDE59_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -30,7 +30,7 @@ Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e
 
 🚧🛠️ **Em desenvolvimento...** 🐾  
 
-<img src="./MiauMigo/public/Readme/005F83_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/005F83_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -44,7 +44,7 @@ Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e
 
 Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) 🏪🐾 do setor pet 🐶🐱, fortalecendo a conexão 💬🤝 entre empresas e consumidores 🛍️❤️ por meio de uma plataforma acessível e eficiente 📱💻.
 A proposta busca impulsionar o crescimento sustentável 🌱📈 desse mercado, ao mesmo tempo em que promove o impacto social 🌍🐕‍🦺, destinando parte dos lucros 💸💛 ao apoio de ONGs que resgatam e cuidam de animais em situação de vulnerabilidade 🐾🏠✨.
-<img src="./MiauMigo/public/Readme/FA7268_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/FA7268_solid.png" height = "4px" width= "1000">
 
 
 <!-- ------------------ -->
@@ -59,7 +59,7 @@ A proposta busca impulsionar o crescimento sustentável 🌱📈 desse mercado, 
 🐾💙🛒 Miguamigo Shop é mais do que um simples e-commerce pet — é uma ponte entre empresas 🏪 e consumidores 🐶👩‍💻, promovendo a transformação digital 📲 e fortalecendo o mercado pet com empatia e inovação.
 O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de resgate animal 🐕‍🦺🏠, unindo propósito, tecnologia e solidariedade para construir um futuro mais conectado e humano. 🌐💞🐾
 
-<img src="./MiauMigo/public/Readme/D9A441_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/D9A441_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
@@ -73,7 +73,7 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
-<img src="./MiauMigo/public/Readme/552A0F_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/552A0F_solid.png" height = "4px" width= "1000">
 
 
 <!-- ------------------ -->
@@ -89,7 +89,7 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
 
-<img src="./MiauMigo/public/Readme/005F83_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/005F83_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -101,15 +101,15 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
 </div>
   
 <div align="center">
-  <img src="./MiauMigo/public/Readme/print_home.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./MiauMigo/public/Readme/print_home4.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./MiauMigo/public/Readme/print_home1.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./MiauMigo/public/Readme/print_home5.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./public/Readme/print_home.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./public/Readme/print_home4.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./public/Readme/print_home1.png" style="display: block; margin: 0; padding: 0;" />
+  <img src="./public/Readme/print_home5.png" style="display: block; margin: 0; padding: 0;" />
 </div>
 
 
 
-<img src="./MiauMigo/public/Readme/FFDE59_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/FFDE59_solid.png" height = "4px" width= "1000">
 
 <!-- ------------------ -->
 
@@ -127,7 +127,7 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
 
 🚧🛠️ **Em desenvolvimento...** 🐾 
 
-<img src="./MiauMigo/public/Readme/FA7268_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/FA7268_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
