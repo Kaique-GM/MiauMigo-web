@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela-De-Login</title>
+</head>
+<body>
+ <div class="login-box">
+
+    <h2>Crie sua conta</h2>
+    
+    <!--<form>
+        <h3>Email</h3>
+        <input type="email" placeholder="E-mail" required>
+        <h3>Senha</h3>
+        <input type="password" placeholder="Senha">
+
+        <h3>Confirmar Senha</h3>
+        <input type="password" placeholder="Senha">
+        
+        <input type="submit" value="Entrar">
+       
+    </form>-->
+
+    <form #form="ngForm" (ngSubmit)="salvar()">
+        <div class="row">
+            <div class="col-md-12">
+                
+                <h3>Email</h3>
+                <input type="text" name="email" placeholder="E-mail" class="form-control" [(ngModel)]="usuario.email" required email>
+                <div *ngIf="form.submitted && form.controls['email'].errors" class="invalid">
+                    <div *ngIf="form.controls['email'].errors['required']">
+                        E-mail é obrigatório</div>
+                    <div *ngIf="form.controls['email'].errors['email']">
+                        E-mail não está em um formato válido</div>
+                </div>
+                
+                <h3>Senha</h3>
+                <input type="password" name="senha" placeholder="Senha" class="form-control" [(ngModel)]="usuario.senha" required>
+                <div *ngIf="form.submitted && form.controls['senha'].errors" class="invalid">
+                    <div *ngIf="form.controls['senha'].errors['required']">
+                        Senha é obrigatório</div>
+                </div>
+
+                <h3>Confirmar Senha</h3>
+                <input type="password" name="confirmacaoSenha" placeholder="Confirmação da Senha" class="form-control" [(ngModel)]="usuario.confirmacaoSenha" required>
+                <div *ngIf="form.submitted && form.controls['confirmacaoSenha'].errors" class="invalid">
+                    <div *ngIf="form.controls['confirmacaoSenha'].errors['required']">
+                        Confirmar Senha é obrigatório</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Cadastre-se</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+            </div>
+        </div>
+    </form>
+      <!--  <a href="#">Cadastre-se</a>  tela-cadastro-usuario -->
+
+ </div>
+</body>
+</html>
