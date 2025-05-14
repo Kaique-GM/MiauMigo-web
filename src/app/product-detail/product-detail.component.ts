@@ -62,7 +62,29 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-  buy(){
-    this.router.navigate(['**'])
+  showPopup: boolean = false;
+  quantidade: number = 1;
+  pagamentoSelecionado: string = 'pix';
+  
+  buy() {
+    console.log('Abrindo popup...');
+    this.showPopup = true;
   }
+  
+  
+  closePopup() {
+    this.showPopup = false;
+  }
+  
+  adicionarAoCarrinho() {
+    console.log('Adicionado ao carrinho:', this.quantidade, this.pagamentoSelecionado);
+    this.showPopup = false;
+  }
+  
+  finalizarCompra() {
+    console.log('Compra finalizada:', this.quantidade, this.pagamentoSelecionado);
+    this.router.navigate(['/checkout']); // redireciona se tiver rota de checkout
+    this.showPopup = false;
+  }
+
 }

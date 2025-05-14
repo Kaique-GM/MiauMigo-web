@@ -23,6 +23,8 @@
             </div>
         </div>
     </div>
+
+    
     <!-- em testes -->
 
     <div class="comments-section">
@@ -46,5 +48,22 @@
             </div>
         </div>
     </div>
+    <div class="popup-backdrop" *ngIf="showPopup" (click)="closePopup()"></div>
+    <div class="popup" *ngIf="showPopup">
+      <h3>Finalizar Compra</h3>
+      <label for="quantidade">Quantidade:</label>
+      <input id="quantidade" type="number" min="1" [(ngModel)]="quantidade" />
+      <label for="pagamento">Método de Pagamento:</label>
+      <select id="pagamento" [(ngModel)]="pagamentoSelecionado">
+        <option value="pix">Pix</option>
+        <option value="boleto">Boleto</option>
+        <option value="cartao">Cartão de Crédito</option>
+      </select>
+      <div class="popup-buttons">
+        <button (click)="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+        <button (click)="finalizarCompra()">Finalizar Compra</button>
+      </div>
+    </div>
+    
 
 </body>

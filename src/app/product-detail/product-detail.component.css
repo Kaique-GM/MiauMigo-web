@@ -250,3 +250,79 @@
     z-index: 0;
     pointer-events: none;
 }
+
+/* Victor */
+
+.popup-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.popup {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fffdf5;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 100;
+  width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup h3 {
+  color: #552A0F;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.popup label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #552A0F;
+}
+
+.popup input,
+.popup select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.popup-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  background: linear-gradient(to right, #005F83, #2D9CDB);
+  color: #FFDE59;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.popup-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.popup-backdrop {
+  z-index: 99;
+}
+.popup {
+  z-index: 100;
+}
