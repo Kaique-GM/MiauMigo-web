@@ -1,26 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela-De-Login</title>
-</head>
 <body>
- <div class="login-box">
+    <div class="left">
+        <img src="/Login/cliente.png" alt="">
+    </div>
 
-    <h2>Login - MiauMigo</h2>
-    
-    <form>
-        <input type="email" placeholder="E-mail" required>
+    <!-- Caixa central com flip -->
+    <div class="card-container" [class.flipped]="perfilSelecionado">
+        <div class="card">
+            <!-- Frente-->
+            <div class="card-face card-front">
+                <h1>Acesse como</h1>
+                <div class="logo"><img src="/Icons/cat.png" alt=""></div>
+                <div class="button-group">
+                    <button class="btnVendedor" (click)="selecionarPerfil('vendedor')">Vendedor</button>
+                    <button class="btnCliente" (click)="selecionarPerfil('cliente')">Cliente</button>
+                </div>
+            </div>
 
-        <input type="password" placeholder="Senha">
+            <!-- Verso-->
+            <div class="card-face card-back">
+                <h2 *ngIf="perfilSelecionado === 'cliente'">Login Cliente</h2>
+                <h2 *ngIf="perfilSelecionado === 'vendedor'">Login Vendedor</h2>
 
-        <input type="submit" value="Entrar">
-       
-    </form>
-    <a routerLink="/opcao-cadastro" routerLinkActive="active" class="nav-link">Cadastre-se</a>
+                <div *ngIf="gatinho" class="logo"><img src="/Icons/cat.png" alt=""></div>
+                <div *ngIf="!gatinho" class="logo_sad"><img src="/Icons/sad_cat.png" alt=""></div>
 
- </div>
+
+                <form #form="ngForm" (ngSubmit)="login('')">
+
+                    <label for="email" class="label">Email:</label>
+                    <input type="text" name="email" class="form" [(ngModel)]="email" required email>
+                    <div *ngIf="form.submitted && form.controls['email'].errors" class="invalid">
+                        <div *ngIf="form.controls['email'].errors['required']">
+                            Email é obrigatório!
+                        </div>
+                        <div *ngIf="form.controls['email'].errors['email']">
+                            Email inválido!
+                        </div>
+                    </div>
+
+                    <label for="senha" class="label">Senha:</label>
+                    <input type="password" name="senha" class="form" [(ngModel)]="senha" required>
+                    <div *ngIf="form.submitted && form.controls['senha'].errors" class="invalid">
+                        <div *ngIf="form.controls['senha'].errors['required']">
+                            Senha é obrigatório!
+                        </div>
+                    </div>
+                    <div class="button-group_2">
+                        <button *ngIf="perfilSelecionado === 'cliente'" type="submit" (click)="login('cliente')"
+                            class="btnLoginCliente"> Login</button>
+                        <button *ngIf="perfilSelecionado === 'vendedor'" type="submit" (click)="login('vendedor')"
+                            class="btnLoginVendedor"> Login</button>
+                        <button (click)="voltar()" class="btnVoltar">Voltar</button>
+                    </div>
+
+                    <div class="links">
+                        <span>Não possui conta?</span>
+                        <li><a *ngIf="perfilSelecionado === 'cliente'" [routerLink]="['/cadastro-cliente']">Cadastre-se</a></li>
+                        <li><a *ngIf="perfilSelecionado === 'vendedor'" [routerLink]="['/cadastro-vendedor']">Cadastre-se</a></li>
+                        <li><a *ngIf="perfilSelecionado === 'cliente'" [routerLink]="['/home']">Continuar sem login</a></li>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <div class="right">
+        <img src="/Login/vendedor.png" alt="">
+    </div>
 </body>
-</html>
-<!--falta colocar as imagens-->

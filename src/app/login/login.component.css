@@ -1,60 +1,260 @@
-
-body{
-    background-color: #ffffff;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content:center ;
-}
-.login-box{
-    background-color: #fad843d7;
-    width: 340px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    display: grid;
-    gap: 10px;
-
-}
-form{
-    display: grid;
-    gap: 10px;
-}
-h2{
-    color: #333;
-    text-align: center;
-    font-family: monospace;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    background-color: #e4c63eaf;
-
-}
-.login-box form input{
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    outline: none;   
-}
-.login-box form input:focus{
-    border-color: rgb(70, 243, 255);
-}
-.login-box form input[type="submit"]{
-    background-color: #368ada;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-}
-.login-box form input:hover{
-    cursor: pointer;
-    opacity: 0.9;
-}
-a{
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    color: #111010;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-a:hover{
-    text-decoration: underline;
+/* Container do card com efeito flip */
+.card-container {
+  perspective: 1000px;
+  width: 320px;
+  height: 520px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Estrutura do card */
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 50px;
+
+}
+
+/* Gira o card quando o perfil for selecionado */
+.card-container.flipped .card {
+  transform: rotateY(180deg);
+}
+
+/* Faces do card (frente e verso) */
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  text-align: center;
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Frente do card (escolha vendedor/cliente) */
+.card-front {
+  z-index: 2;
+}
+
+/* Verso do card (formulário de login) */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Título */
+.card-face h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #552A0F;
+}
+
+.card-face h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: -10px;
+  color: #552A0F;
+}
+
+.invalid {
+  color: red;
+  font-size: 15px;
+}
+
+.label {
+  color: #552A0F;
+}
+
+.form {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #552A0F;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #552A0F;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form:focus {
+  border-color: #C19A6B;
+  outline: none;
+}
+
+.btnLoginCliente {
+  background: linear-gradient(to right, #FFDE59, #D9A441);
+  color: #552A0F;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnLoginCliente:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btnLoginVendedor {
+  background: linear-gradient(to right, #005F83, #2D9CDB);
+  color: #FFDE59;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnLoginVendedor:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btnVoltar {
+  background: linear-gradient(to right, #552A0F, #8B5E2C);
+  color: #FFDE59;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnVoltar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões agrupados */
+.button-group_2 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.links {
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  color: #552A0F;
+  list-style-type: none;
+
+}
+
+.links li a {
+  color: #D9A441;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links li a:hover {
+  color: #FFDE59;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* -------------------------------------- */
+
+/* Logo */
+.logo,
+.logo_sad {
+  align-items: center;
+}
+
+.logo img {
+  position: relative;
+  height: 115px;
+  width: 115px;
+}
+
+.logo_sad img {
+  position: relative;
+  height: 155px;
+  width: 155px;
+  margin-bottom: -10px;
+}
+
+/* -------------------------------------- */
+
+/* Botões agrupados */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Botão Vendedor */
+.btnVendedor {
+  background: linear-gradient(to right, #005F83, #2D9CDB);
+  color: #FFDE59;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnVendedor:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------------- */
+
+/* Botão Cliente */
+.btnCliente {
+  background: linear-gradient(to right, #D9A441, #FFDE59);
+  color: #005F83;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btnCliente:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------------- */
+
+/* Imagens laterais */
+.left img,
+.right img {
+  height: 695px;
+  width: auto;
 }
