@@ -1,7 +1,11 @@
+import { produto } from "./produto";
+
 export interface Usuario {
-    id: number | null,
-    email: String,
-    senha: String,
-    confirmacaoSenha:String,
-    ativo: Boolean
+    id: number,
+    username: string,
+    email: string,
+    senha: string,
+    favoritos: produto[],
+    carrinho: produto[],
+    Image: string;
 }

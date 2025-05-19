@@ -27,8 +27,9 @@
 
                 <form #form="ngForm" (ngSubmit)="login('')">
 
-                    <label for="email" class="label">Email:</label>
-                    <input type="text" name="email" class="form" [(ngModel)]="email" required email>
+                    <label for="email" class="visually-hidden">Digite seu email:</label>
+                    <input type="text" name="email" class="form" [(ngModel)]="email" required email
+                        placeholder="Digite seu email">
                     <div *ngIf="form.submitted && form.controls['email'].errors" class="invalid">
                         <div *ngIf="form.controls['email'].errors['required']">
                             Email é obrigatório!
@@ -38,13 +39,18 @@
                         </div>
                     </div>
 
-                    <label for="senha" class="label">Senha:</label>
-                    <input type="password" name="senha" class="form" [(ngModel)]="senha" required>
+                    <label for="senha" class="visually-hidden">Senha:</label>
+                    <input type="password" name="senha" class="form" [(ngModel)]="senha" required placeholder="Senha">
                     <div *ngIf="form.submitted && form.controls['senha'].errors" class="invalid">
                         <div *ngIf="form.controls['senha'].errors['required']">
                             Senha é obrigatório!
                         </div>
                     </div>
+
+                    <div *ngIf="msgError" class="erro-login">
+                        {{ msgError }}
+                    </div>
+                    
                     <div class="button-group_2">
                         <button *ngIf="perfilSelecionado === 'cliente'" type="submit" (click)="login('cliente')"
                             class="btnLoginCliente"> Login</button>
@@ -55,16 +61,19 @@
 
                     <div class="links">
                         <span>Não possui conta?</span>
-                        <li><a *ngIf="perfilSelecionado === 'cliente'" [routerLink]="['/cadastro-cliente']">Cadastre-se</a></li>
-                        <li><a *ngIf="perfilSelecionado === 'vendedor'" [routerLink]="['/cadastro-vendedor']">Cadastre-se</a></li>
-                        <li><a *ngIf="perfilSelecionado === 'cliente'" [routerLink]="['/home']">Continuar sem login</a></li>
+                        <li><a *ngIf="perfilSelecionado === 'cliente'"
+                                [routerLink]="['/cadastro-cliente']">Cadastre-se</a></li>
+                        <li><a *ngIf="perfilSelecionado === 'vendedor'"
+                                [routerLink]="['/cadastro-vendedor']">Cadastre-se</a></li>
+                        <li><a *ngIf="perfilSelecionado === 'cliente'" [routerLink]="['/home']">Continuar sem login</a>
+                        </li>
                     </div>
                 </form>
 
             </div>
         </div>
     </div>
-    <!--  -->
+
 
     <div class="right">
         <img src="/Login/vendedor.png" alt="">

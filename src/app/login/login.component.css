@@ -40,12 +40,12 @@ body {
   backface-visibility: hidden;
   border-radius: 50px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  background-color: white;
   text-align: center;
   padding: 20px 40px 20px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 /* Frente do card (escolha vendedor/cliente) */
@@ -56,6 +56,7 @@ body {
 /* Verso do card (formulário de login) */
 .card-back {
   transform: rotateY(180deg);
+  overflow-y: hidden;
 }
 
 /* Título */
@@ -78,8 +79,13 @@ body {
   font-size: 15px;
 }
 
-.label {
-  color: #552A0F;
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .form {
@@ -92,6 +98,7 @@ body {
   background-color: #fff;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
+  margin-bottom: 5px;
 }
 
 .form:focus {
@@ -180,6 +187,14 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.erro-login {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 
 
 /* -------------------------------------- */

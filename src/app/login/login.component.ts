@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { Usuario } from '../models/Usuario';
+import { StorageService } from '../services/localStorage';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +13,17 @@ import { RouterLink } from '@angular/router';
 })
 export class LoginComponent {
 
+  constructor(private router: Router, private service: StorageService) { }
+
+  usuarios: Usuario[] = [
+    { id: 1, username: "Adminilson", email: "admin@gmail.com", senha: "123", carrinho: [], favoritos: [], Image: ''}
+  ];
+
   perfilSelecionado: 'cliente' | 'vendedor' | null = null;
   gatinho: boolean = true;
-
   email: string = "";
   senha: string = "";
+  msgError: string = "";
 
   @ViewChild('form') form!: NgForm;
 
@@ -23,8 +31,27 @@ export class LoginComponent {
     this.perfilSelecionado = perfil;
   }
 
-  login(usuario: string) {
-    this.gatinho = false;
+  login(perfil: string) {
+
+    if (this.form.invalid) {
+      this.gatinho = false;
+      return;
+    }
+
+    if (perfil === 'cliente') {
+      const usuarioEncontrado = this.usuarios.find(
+        (usuario) => usuario.email === this.email && usuario.senha === this.senha
+      );
+
+      if (usuarioEncontrado) {
+        this.router.navigate(['home']);
+        this.service.setLocal('user', usuarioEncontrado);
+      }
+
+      else {
+        this.msgError = 'Credenciais incorretas. Verifique e tente novamente.';
+      }
+    }
   }
 
   voltar() {

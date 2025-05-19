@@ -14,8 +14,10 @@ export class CadastroClienteComponent {
     id: 0,
     email: '',
     senha: '',
-    confirmacaoSenha: '',
-    ativo: false
+    favoritos: [],
+    carrinho: [],
+    username: '',
+    Image: ''
   };
 
   @ViewChild('form') form!: NgForm;
