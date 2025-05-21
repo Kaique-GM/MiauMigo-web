@@ -1,8 +1,6 @@
-export interface Vendedor {
-    id: number | null,
-    email: String,
-    senha: String,
-    confirmacaoSenha:String,
+import { Usuario } from "./Usuario";
+
+export interface Vendedor extends Usuario {
     cnpj: String,
     ativo: Boolean
 }

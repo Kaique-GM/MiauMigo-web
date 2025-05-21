@@ -3,11 +3,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background: linear-gradient(157deg,
+      #D9A441 0%,
+      #FFDE59 45%,
+      #7AAAC1 50%,
+      #2D9CDB 55%,
+      #005F83 100%);
   font-family: 'Poppins', sans-serif;
 }
 
-/* Container do card com efeito flip */
+
 .card-container {
   perspective: 1000px;
   width: 320px;
@@ -24,7 +29,6 @@ body {
   transform-style: preserve-3d;
   position: relative;
   border-radius: 50px;
-
 }
 
 /* Gira o card quando o perfil for selecionado */
@@ -48,18 +52,15 @@ body {
   overflow-x: hidden;
 }
 
-/* Frente do card (escolha vendedor/cliente) */
 .card-front {
   z-index: 2;
 }
 
-/* Verso do card (formulário de login) */
 .card-back {
   transform: rotateY(180deg);
   overflow-y: hidden;
 }
 
-/* Título */
 .card-face h1 {
   font-size: 1.9rem;
   font-weight: bold;
@@ -79,6 +80,7 @@ body {
   font-size: 15px;
 }
 
+/* texto invicivel */
 .visually-hidden {
   position: absolute;
   left: -10000px;
@@ -267,9 +269,53 @@ body {
 
 /* -------------------------------------- */
 
-/* Imagens laterais */
-.left img,
-.right img {
-  height: 695px;
+
+.cliente-icon {
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: -170px;
   width: auto;
+  height: 225px;
+  opacity: 0;
+  animation: clienteAnim 4.0s ease-in-out forwards;
+  /* começa deslocado pra baixo e direita */
+  transform: translate(-20px, -28px);
+}
+
+.vendedor-icon {
+  position: absolute;
+  z-index: -1;
+  bottom: 80px;
+  right: -225px;
+  width: auto;
+  height: 225px;
+  opacity: 0;
+  animation: vendedorAnim 4.0s ease-in-out forwards;
+  /* começa deslocado pra cima e esquerda */
+  transform: translate(-20px, -28px);
+}
+
+@keyframes clienteAnim {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 68px) rotate(-55deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(-55deg);
+  }
+}
+
+@keyframes vendedorAnim {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, -68px) rotate(70deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(70deg);
+  }
 }

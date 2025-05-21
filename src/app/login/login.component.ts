@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { Usuario } from '../models/Usuario';
+import { Cliente } from '../models/Cliente';
 import { StorageService } from '../services/localStorage';
 
 @Component({
@@ -15,8 +15,8 @@ export class LoginComponent {
 
   constructor(private router: Router, private service: StorageService) { }
 
-  usuarios: Usuario[] = [
-    { id: 1, username: "Adminilson", email: "admin@gmail.com", senha: "123", carrinho: [], favoritos: [], Image: ''}
+  clientes: Cliente[] = [
+    { id: 1, username: "Adminilson", email: "admin@gmail.com", senha: "123", carrinho: [], favoritos: [], Image: '', tipo:'cliente'}
   ];
 
   perfilSelecionado: 'cliente' | 'vendedor' | null = null;
@@ -39,8 +39,8 @@ export class LoginComponent {
     }
 
     if (perfil === 'cliente') {
-      const usuarioEncontrado = this.usuarios.find(
-        (usuario) => usuario.email === this.email && usuario.senha === this.senha
+      const usuarioEncontrado = this.clientes.find(
+        (cliente) => cliente.email === this.email && cliente.senha === this.senha
       );
 
       if (usuarioEncontrado) {
@@ -52,6 +52,8 @@ export class LoginComponent {
         this.msgError = 'Credenciais incorretas. Verifique e tente novamente.';
       }
     }
+
+    
   }
 
   voltar() {

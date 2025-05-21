@@ -10,20 +10,20 @@ import { Usuario } from '../models/Usuario';
   styleUrl: './cadastro-cliente.component.css'
 })
 export class CadastroClienteComponent {
-  usuario: Usuario = {
-    id: 0,
-    email: '',
-    senha: '',
-    favoritos: [],
-    carrinho: [],
-    username: '',
-    Image: ''
-  };
+  // usuario: Usuario = {
+  //   id: 0,
+  //   email: '',
+  //   senha: '',
+  //   favoritos: [],
+  //   carrinho: [],
+  //   username: '',
+  //   Image: ''
+  // };
 
   @ViewChild('form') form!: NgForm;
   salvar() {
     if (this.form.valid) {
-      console.log('Usuário salvo:', this.usuario);
+      // console.log('Usuário salvo:', this.usuario);
       alert('Usuário salvo com sucesso!');
     }
   }

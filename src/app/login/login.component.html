@@ -1,9 +1,4 @@
 <body>
-    <div class="left">
-        <img src="/Login/cliente.png" alt="">
-    </div>
-
-    <!-- Caixa central com flip -->
     <div class="card-container" [class.flipped]="perfilSelecionado">
         <div class="card">
             <!-- Frente-->
@@ -50,7 +45,7 @@
                     <div *ngIf="msgError" class="erro-login">
                         {{ msgError }}
                     </div>
-                    
+
                     <div class="button-group_2">
                         <button *ngIf="perfilSelecionado === 'cliente'" type="submit" (click)="login('cliente')"
                             class="btnLoginCliente"> Login</button>
@@ -72,10 +67,8 @@
 
             </div>
         </div>
+        <img *ngIf="perfilSelecionado === 'cliente'" src="Login/cliente.png" alt="" class="cliente-icon">
+        <img *ngIf="perfilSelecionado === 'vendedor'" src="Login/vendedor.png" alt="" class="vendedor-icon">
     </div>
 
-
-    <div class="right">
-        <img src="/Login/vendedor.png" alt="">
-    </div>
 </body>

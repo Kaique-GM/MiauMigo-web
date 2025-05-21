@@ -10,19 +10,18 @@ import { Vendedor } from '../models/Vendedor';
   styleUrl: './cadastro-vendedor.component.css'
 })
 export class CadastroVendedorComponent {
-  vendedor: Vendedor = {
-    id: 0,
-    cnpj: '',
-    email: '',
-    senha: '',
-    confirmacaoSenha: '',
-    ativo: false
-  };
+  // vendedor: Vendedor = {
+  //   id: 0,
+  //   cnpj: '',
+  //   email: '',
+  //   senha: '',
+  //   ativo: false
+  // };
 
   @ViewChild('form') form!: NgForm;
   salvar() {
     if (this.form.valid) {
-      console.log('Usuário salvo:', this.vendedor);
+      // console.log('Usuário salvo:', this.vendedor);
       alert('Usuário salvo com sucesso!');
     }
   }

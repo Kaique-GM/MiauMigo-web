@@ -5,7 +5,6 @@ export interface Usuario {
     username: string,
     email: string,
     senha: string,
-    favoritos: produto[],
-    carrinho: produto[],
     Image: string;
+    tipo: string;
 }
