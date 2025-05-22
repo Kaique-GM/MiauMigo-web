@@ -57,9 +57,9 @@
                     <div class="links">
                         <span>Não possui conta?</span>
                         <li><a *ngIf="perfilSelecionado === 'cliente'"
-                                [routerLink]="['/cadastro-cliente']">Cadastre-se</a></li>
+                                (click)="cadastro('cliente')">Cadastre-se</a></li>
                         <li><a *ngIf="perfilSelecionado === 'vendedor'"
-                                [routerLink]="['/cadastro-vendedor']">Cadastre-se</a></li>
+                                (click)="cadastro('vendedor')">Cadastre-se</a></li>
                         <li><a *ngIf="perfilSelecionado === 'cliente'" [routerLink]="['/home']">Continuar sem login</a>
                         </li>
                     </div>

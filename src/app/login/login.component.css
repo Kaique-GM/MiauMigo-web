@@ -19,6 +19,14 @@ body {
   height: 520px;
   position: relative;
   z-index: 10;
+  opacity: 0;
+  animation: fadeInAnimation 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
 }
 
 /* Estrutura do card */
@@ -43,7 +51,7 @@ body {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
   padding: 20px 40px 20px 40px;
   display: flex;
@@ -279,7 +287,6 @@ body {
   height: 225px;
   opacity: 0;
   animation: clienteAnim 4.0s ease-in-out forwards;
-  /* começa deslocado pra baixo e direita */
   transform: translate(-20px, -28px);
 }
 
@@ -292,7 +299,6 @@ body {
   height: 225px;
   opacity: 0;
   animation: vendedorAnim 4.0s ease-in-out forwards;
-  /* começa deslocado pra cima e esquerda */
   transform: translate(-20px, -28px);
 }
 

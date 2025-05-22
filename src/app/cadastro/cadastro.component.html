@@ -1,0 +1,140 @@
+<body>
+    <div [ngClass]="{'cliente-bg': usuario === 'cliente', 'vendedor-bg': usuario === 'vendedor'}" class="page-wrapper">
+        <div *ngIf="usuario === 'cliente'" class="cadastro_cliente">
+            <form #form="ngForm" (ngSubmit)="cadastrarCliente()" class="form-container">
+
+                <h2>Cadastro de Cliente</h2>
+
+                <label for="username" class="visually-hidden">Nome:</label>
+                <input type="text" name="nome" class="form" placeholder="Nome" [(ngModel)]="nome" required />
+
+                <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
+                    <div *ngIf="form.controls['nome'].errors['required']">
+                        Nome é obrigatório!
+                    </div>
+                </div>
+
+                <label for="email" class="visually-hidden">E-mail:</label>
+                <input type="email" class="form" name="email" placeholder="E-mail" [(ngModel)]="email" required email />
+
+                <div *ngIf="form.submitted && form.controls['email'].errors" class="invalid">
+                    <div *ngIf="form.controls['email'].errors['required']">
+                        Email é obrigatório!
+                    </div>
+                    <div *ngIf="form.controls['email'].errors['email']">
+                        Email inválido!
+                    </div>
+                </div>
+
+                <label for="senha" class="visually-hidden" placeholder="Senha">Senha:</label>
+                <input type="password" class="form" name="senha" placeholder="Senha" [(ngModel)]="senha" required />
+
+                <div *ngIf="form.submitted && form.controls['senha'].errors" class="invalid">
+                    <div *ngIf="form.controls['senha'].errors['required']">
+                        Senha é obrigatório!
+                    </div>
+                </div>
+
+                <label for="confirmarSenha" class="visually-hidden">Confirmar Senha:</label>
+                <input type="password" class="form" name="confirmarSenha" placeholder="Confirmar Senha"
+                    [(ngModel)]="confirmarSenha" required />
+
+                <div *ngIf="senha !== confirmarSenha && confirmarSenha" class="invalid">
+                    As senhas não coincidem.
+                </div>
+
+                <h3>Foto(opcional):</h3>
+                <div class="upload-box">
+
+                    <label class="upload-label" *ngIf="!imagemPreview">
+                        <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+                        <span class="plus-icon">+</span>
+                    </label>
+
+                    <div class="image-preview" *ngIf="imagemPreview">
+                        <img [src]="imagemPreview" alt="Preview da imagem" />
+                        <button class="remove-btn" (click)="removerImagem()">×</button>
+                    </div>
+                </div>
+
+                <!-- Nome do arquivo (opcional) -->
+                <p *ngIf="caminhoImg">Arquivo selecionado: {{ caminhoImg }}</p>
+
+                <div class="button-group_2">
+                    <button type="submit" class="btnCliente">Cadastrar</button>
+                    <button (click)="voltar()" class="btnVoltar">Voltar</button>
+                </div>
+            </form>
+            <img src="Icons/cat.png" alt="" class="cliente-icon">
+        </div>
+
+        <div *ngIf="usuario === 'vendedor'" class="cadastro_vendedor">
+            <form #form="ngForm" (ngSubmit)="cadastrarVendedor()" class="form-container">
+
+                <h1>Cadastro de Vendedor</h1>
+
+                <label for="username" class="visually-hidden">Nome:</label>
+                <input type="text" name="nome" class="form" placeholder="Nome" [(ngModel)]="nome" required />
+
+                <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
+                    <div *ngIf="form.controls['nome'].errors['required']">
+                        Nome é obrigatório!
+                    </div>
+                </div>
+
+                <label for="email" class="visually-hidden">E-mail:</label>
+                <input type="email" class="form" name="email" placeholder="E-mail" [(ngModel)]="email" required email />
+
+                <div *ngIf="form.submitted && form.controls['email'].errors" class="invalid">
+                    <div *ngIf="form.controls['email'].errors['required']">
+                        Email é obrigatório!
+                    </div>
+                    <div *ngIf="form.controls['email'].errors['email']">
+                        Email inválido!
+                    </div>
+                </div>
+
+                <label for="senha" class="visually-hidden" placeholder="Senha">Senha:</label>
+                <input type="password" class="form" name="senha" placeholder="Senha" [(ngModel)]="senha" required />
+
+                <div *ngIf="form.submitted && form.controls['senha'].errors" class="invalid">
+                    <div *ngIf="form.controls['senha'].errors['required']">
+                        Senha é obrigatório!
+                    </div>
+                </div>
+
+                <label for="confirmarSenha" class="visually-hidden">Confirmar Senha:</label>
+                <input type="password" class="form" name="confirmarSenha" placeholder="Confirmar Senha"
+                    [(ngModel)]="confirmarSenha" required />
+
+                <div *ngIf="senha !== confirmarSenha && confirmarSenha" class="invalid">
+                    As senhas não coincidem.
+                </div>
+
+                <label for="cnpj" class="visually-hidden">CNPJ:</label>
+                <input type="text" name="cnpj" class="form" placeholder="CNPJ" [(ngModel)]="cnpj" required />
+
+                <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
+                    <div *ngIf="form.controls['nome'].errors['required']">
+                        CNPJ é obrigatório!
+                    </div>
+                </div>
+
+                <label for="loja" class="visually-hidden">Nome da Loja:</label>
+                <input type="text" name="loja" class="form" placeholder="Nome da Loja" [(ngModel)]="loja" required />
+
+                <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
+                    <div *ngIf="form.controls['nome'].errors['required']">
+                        O Nome da Loja é obrigatório!
+                    </div>
+                </div>
+
+                <div class="button-group_2">
+                    <button type="submit" class="btnVendedor">Cadastrar</button>
+                    <button (click)="voltar()" class="btnVoltar">Voltar</button>
+                </div>
+            </form>
+            <img src="Icons/cat.png" alt="" class="vendedor-icon">
+        </div>
+    </div>
+</body>

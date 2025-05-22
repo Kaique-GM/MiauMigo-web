@@ -6,10 +6,9 @@ import { AnunciarComponent } from './anunciar/anunciar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LoginComponent } from './login/login.component';
-import { CadastroVendedorComponent } from './cadastro-vendedor/cadastro-vendedor.component';
-import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 export const routes: Routes = [
 
@@ -36,8 +35,7 @@ export const routes: Routes = [
         component: AuthLayoutComponent,
         children: [
             { path: 'login', component: LoginComponent },
-            { path: 'cadastro-cliente', component: CadastroClienteComponent },
-            { path: 'cadastro-vendedor', component: CadastroVendedorComponent },
+            { path: 'cadastro', component: CadastroComponent},
 
         ],
     },

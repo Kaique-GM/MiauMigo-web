@@ -16,7 +16,7 @@ export class LoginComponent {
   constructor(private router: Router, private service: StorageService) { }
 
   clientes: Cliente[] = [
-    { id: 1, username: "Adminilson", email: "admin@gmail.com", senha: "123", carrinho: [], favoritos: [], Image: '', tipo:'cliente'}
+    { id: 1, username: "Adminilson", email: "admin@gmail.com", senha: "123", carrinho: [], favoritos: [], Image: '', tipo: 'cliente' }
   ];
 
   perfilSelecionado: 'cliente' | 'vendedor' | null = null;
@@ -53,10 +53,15 @@ export class LoginComponent {
       }
     }
 
-    
+
   }
 
   voltar() {
     this.perfilSelecionado = null;
+  }
+
+  cadastro(tipoUser: string) {
+    this.service.setLocal('tipoUser', tipoUser);
+    this.router.navigate(['cadastro']);
   }
 }
