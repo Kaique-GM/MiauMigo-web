@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 export const routes: Routes = [
 
@@ -24,8 +25,7 @@ export const routes: Routes = [
             { path: 'about', component: AboutComponent },
             { path: 'anunciar', component: AnunciarComponent },
             { path: 'product-detail/:id', component: ProductDetailComponent },
-
-
+            { path: 'perfil', component: PerfilComponent },
         ],
     },
 

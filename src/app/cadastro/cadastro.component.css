@@ -24,7 +24,16 @@
             #004F6A 100%);
 }
 
-.cadastro_vendedor,
+.cadastro_vendedor {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in-out forwards;
+}
+
 .cadastro_cliente {
     display: flex;
     justify-content: center;
@@ -49,6 +58,31 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.vendedor {
+    background: white;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* Ultimos Inputs do vendedor */
+.input_photo {
+    display: flex;
+    gap: 20px;
+}
+
+.input_1 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .form {
@@ -187,6 +221,8 @@ h3 {
 
 /* imgs */
 
+
+
 .upload-box {
     width: 100px;
     height: 100px;
@@ -262,12 +298,34 @@ h3 {
     transform: translate(-20px, -28px);
 }
 
+.cliente-icon_2 {
+    position: absolute;
+    z-index: -1;
+    left: 390px;
+    width: auto;
+    height: 305px;
+    opacity: 0;
+    animation: clienteAnim 4.0s ease-in-out forwards;
+    transform: translate(-20px, -28px);
+}
+
 .vendedor-icon {
     position: absolute;
     z-index: -1;
-    right: 440px;
+    right: 360px;
     width: auto;
     height: 225px;
+    opacity: 0;
+    animation: vendedorAnim 4.0s ease-in-out forwards;
+    transform: translate(-20px, -28px);
+}
+
+.vendedor-icon_2 {
+    position: absolute;
+    z-index: -1;
+    right: 310px;
+    width: auto;
+    height: 305px;
     opacity: 0;
     animation: vendedorAnim 4.0s ease-in-out forwards;
     transform: translate(-20px, -28px);

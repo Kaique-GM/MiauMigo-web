@@ -65,11 +65,12 @@
                     <button (click)="voltar()" class="btnVoltar">Voltar</button>
                 </div>
             </form>
-            <img src="Icons/cat.png" alt="" class="cliente-icon">
+            <img *ngIf="gatinho" src="Icons/cat.png" alt="" class="cliente-icon">
+            <img *ngIf="!gatinho" src="Icons/sad_cat.png" alt="" class="cliente-icon_2">
         </div>
 
         <div *ngIf="usuario === 'vendedor'" class="cadastro_vendedor">
-            <form #form="ngForm" (ngSubmit)="cadastrarVendedor()" class="form-container">
+            <form #form="ngForm" (ngSubmit)="cadastrarVendedor()" class="form-container vendedor">
 
                 <h1>Cadastro de Vendedor</h1>
 
@@ -111,30 +112,52 @@
                     As senhas não coincidem.
                 </div>
 
-                <label for="cnpj" class="visually-hidden">CNPJ:</label>
-                <input type="text" name="cnpj" class="form" placeholder="CNPJ" [(ngModel)]="cnpj" required />
+                <div class="input_photo">
+                    <div class="input_1">
+                        <label for="cnpj" class="visually-hidden">CNPJ:</label>
+                        <input type="text" name="cnpj" class="form" placeholder="CNPJ" [(ngModel)]="cnpj" required />
 
-                <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
-                    <div *ngIf="form.controls['nome'].errors['required']">
-                        CNPJ é obrigatório!
+                        <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
+                            <div *ngIf="form.controls['nome'].errors['required']">
+                                CNPJ é obrigatório!
+                            </div>
+                        </div>
+
+                        <label for="loja" class="visually-hidden">Nome da Loja:</label>
+                        <input type="text" name="loja" class="form" placeholder="Nome da Loja" [(ngModel)]="loja"
+                            required />
+
+                        <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
+                            <div *ngIf="form.controls['nome'].errors['required']">
+                                O Nome da Loja é obrigatório!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <h3>Foto(opcional):</h3>
+                        <div class="upload-box">
+
+                            <label class="upload-label" *ngIf="!imagemPreview">
+                                <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+                                <span class="plus-icon">+</span>
+                            </label>
+
+                            <div class="image-preview" *ngIf="imagemPreview">
+                                <img [src]="imagemPreview" alt="Preview da imagem" />
+                                <button class="remove-btn" (click)="removerImagem()">×</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <label for="loja" class="visually-hidden">Nome da Loja:</label>
-                <input type="text" name="loja" class="form" placeholder="Nome da Loja" [(ngModel)]="loja" required />
-
-                <div *ngIf="form.submitted && form.controls['nome'].errors" class="invalid">
-                    <div *ngIf="form.controls['nome'].errors['required']">
-                        O Nome da Loja é obrigatório!
-                    </div>
-                </div>
 
                 <div class="button-group_2">
                     <button type="submit" class="btnVendedor">Cadastrar</button>
                     <button (click)="voltar()" class="btnVoltar">Voltar</button>
                 </div>
             </form>
-            <img src="Icons/cat.png" alt="" class="vendedor-icon">
+            <img *ngIf="gatinho" src="Icons/cat.png" alt="" class="vendedor-icon">
+            <img *ngIf="!gatinho" src="Icons/sad_cat.png" alt="" class="vendedor-icon_2">
         </div>
     </div>
 </body>
