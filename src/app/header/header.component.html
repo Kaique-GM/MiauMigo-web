@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" [ngClass]="headerClass">
     <nav>
         <div class="logo">
             <img (click)="home()" src="/Icons/Logo(SemFundo).png" alt="Logo">
@@ -23,8 +23,18 @@
                     <img src="/Header/car.png" alt="carrinho" class="icon-img-car">
                     <span class="count-car">0</span>
                 </div>
-                <div class="icon user">
-                    <img src="/Header/user.png" alt="User" class="user-img">
+                <div class="icon user" (mouseenter)="onUserImgEnter()" (mouseleave)="onUserImgLeave()">
+                    <img [src]="session && img ? img : '/Header/user.png'" alt="User" class="user-img">
+
+                    <div *ngIf="!session" class="user-dropdown" [ngClass]="{ 'show': showDropdown }">
+                        <a routerLink="/login">Login</a>
+                    </div>
+
+                    <div *ngIf="session" class="user-dropdown" [ngClass]="{ 'show': showDropdown }">
+                        <a routerLink="/perfil">Meu Perfil</a>
+                        <a routerLink="/pedidos">Meus Pedidos</a>
+                        <a (click)="logout()">Sair</a>
+                    </div>
                 </div>
             </div>
         </div>

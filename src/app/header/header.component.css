@@ -14,14 +14,17 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
     z-index: 1;
+    transition: border-radius 0.8s ease;
 }
 
 /* Responsividade */
 
 @media (max-width: 768px) {
     .header {
-        max-width: 90%;  /* Para telas menores, reduz o tamanho máximo */
-        padding: 0 20px;  /* Adiciona padding para manter o conteúdo distante das bordas */
+        max-width: 90%;
+        /* Para telas menores, reduz o tamanho máximo */
+        padding: 0 20px;
+        /* Adiciona padding para manter o conteúdo distante das bordas */
     }
 }
 
@@ -74,7 +77,7 @@ nav .logo img {
 
 /* Esconde a seta quando hover no header ou sub-header */
 .header:hover .arrow-down,
-.sub-header:hover ~ .header .arrow-down {
+.sub-header:hover~.header .arrow-down {
     opacity: 0;
     transition-delay: 0.1s;
 }
@@ -269,8 +272,50 @@ input:focus {
 }
 
 .nav-item .nav-link.active {
-    color: #D9A441; /* Cor desejada, pode ser qualquer cor */
+    color: #D9A441;
+    /* Cor desejada, pode ser qualquer cor */
     text-decoration: underline;
 }
 
 /* Fim sub-header */
+
+
+.user-dropdown {
+    position: absolute;
+    top: 88px;
+    /* abaixo da imagem */
+    right: 0;
+    background-color: white;
+    border: none;
+    border-radius: 0 0px 40px 40px; /*  top-left top-right bottom-right bottom-left */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, visibility 0.5s ease;
+    z-index: 1000;
+    text-align: left;
+}
+
+.header.user-hover {
+  border-radius: 100px 100px 0 100px;
+}
+
+.user-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #552A0F;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 40px;
+}
+
+.user-dropdown a:hover {
+    background-color: rgb(255, 221, 87, 0.2);
+}
+
+.user-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+}
