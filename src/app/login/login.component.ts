@@ -38,11 +38,11 @@ export class LoginComponent implements OnInit {
   }
 
   clientes: Cliente[] = [
-    { id: 1, username: "Adminilson", email: "admin@gmail.com", senha: "123", carrinho: [], favoritos: [], Image: '', tipo: 'cliente' }
+    { id: 1, username: "Adminilson", email: "admin@gmail.com", senha: "123", carrinho: [], favoritos: [], Image: 'fotoCliente.png', tipo: 'cliente' }
   ];
 
   vendedores: Vendedor[] = [
-    { id: 1, username: "vendedor_1", cnpj: '12.345.678/0001-95', loja: 'Best Loja', email: "vendedor@gmail.com", senha: "123", produtos: [], Image: '', tipo: 'vendedor' }
+    { id: 1, username: "vendedor_1", cnpj: '12.345.678/0001-95', loja: 'Best Loja', email: "vendedor@gmail.com", senha: "123", produtos: [], Image: 'fotoVendedor.png', tipo: 'vendedor' }
   ]
 
   perfilSelecionado: 'cliente' | 'vendedor' | null = null;

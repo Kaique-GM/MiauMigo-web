@@ -4,12 +4,12 @@ import { ShopComponent } from './shop/shop.component';
 import { AboutComponent } from './about/about.component';
 import { AnunciarComponent } from './anunciar/anunciar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LoginComponent } from './login/login.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { ProductDetailComponent } from './shop/product-detail/product-detail.component';
 
 export const routes: Routes = [
 

@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
         this.img = "/Login/" + usuario.Image;
       }
     }
-
+    
   }
 
   session: boolean = false;

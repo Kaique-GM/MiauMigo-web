@@ -290,7 +290,7 @@ h3 {
 .cliente-icon {
     position: absolute;
     z-index: -1;
-    left: 440px;
+    left: 28%;
     width: auto;
     height: 225px;
     opacity: 0;
@@ -301,7 +301,7 @@ h3 {
 .cliente-icon_2 {
     position: absolute;
     z-index: -1;
-    left: 390px;
+    left: 25%;
     width: auto;
     height: 305px;
     opacity: 0;
@@ -312,7 +312,7 @@ h3 {
 .vendedor-icon {
     position: absolute;
     z-index: -1;
-    right: 360px;
+    right: 24%;
     width: auto;
     height: 225px;
     opacity: 0;
@@ -323,7 +323,7 @@ h3 {
 .vendedor-icon_2 {
     position: absolute;
     z-index: -1;
-    right: 310px;
+    right: 20%;
     width: auto;
     height: 305px;
     opacity: 0;
@@ -334,7 +334,7 @@ h3 {
 @keyframes clienteAnim {
     0% {
         opacity: 0;
-        transform: translate(50px, 68px) rotate(-75deg);
+        transform: translate(50%, 68%) rotate(-75deg);
     }
 
     100% {
@@ -347,7 +347,7 @@ h3 {
 @keyframes vendedorAnim {
     0% {
         opacity: 0;
-        transform: translate(-50px, -68px) rotate(70deg);
+        transform: translate(-50%, -68%) rotate(70deg);
     }
 
     100% {

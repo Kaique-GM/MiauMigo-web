@@ -9,8 +9,12 @@
     <!-- Seção "Explore por Categorias" -->
     <section class="categorias">
         <img src="/Home/dog_2.png" alt="" class="img_dog">
-        <h2><img src="/Icons/osso_2.png" alt="" class="osso_2">Explore por Categorias<img src="/Icons/pata_2.png" alt=""
-                class="pata_2"></h2>
+        <h2>
+            <img src="/Icons/osso_2.png" alt="" class="osso_2">
+            Explore por Categorias
+            <img src="/Icons/pata_2.png" alt="" class="pata_2">
+        </h2>
+
         <div class="cards-container-categ">
             <div class="card-categ" *ngFor=" let categoria of categorias" (click)="shop(categoria.categoria)">
                 <img [src]="categoria.Image" alt="">
@@ -25,7 +29,6 @@
     <section class="linha-premium">
         <img src="/Home/cat_3.png" alt="" class="img_cat">
         <h2 class="linha-premium-title">
-            <img src="/Icons/pata_3.png" alt="" class="pata_3">
             <img src="/Icons/osso_4.png" alt="" class="osso_4">
             Linha Premium
             <img src="/Icons/coracao.png" alt="" class="coracao">
@@ -43,10 +46,11 @@
     <!-- Seção "Sucesso de Vendas" -->
     <section class="sucesso-vendas">
         <img src="/Home/furao.png" alt="" class="img_furao">
-        <img src="/Icons/pata_4.png" alt="" class="pata_4">
-        <img src="/Icons/osso_3.png" alt="" class="osso_3">
-        <h2>Sucesso de Vendas</h2>
-        <img src="/Icons/coracao_1.png" alt="" class="coracao_1">
+        <h2>
+            <img src="/Icons/osso_3.png" alt="" class="osso_3">
+            Sucesso de Vendas
+            <img src="/Icons/coracao_1.png" alt="" class="coracao_1">
+        </h2>
         <div class="cards-container-sucess">
             <div class="card-sucess" *ngFor="let top of top_vendas" (click)="buy(top)">
                 <img [src]="top.Image" alt="">
