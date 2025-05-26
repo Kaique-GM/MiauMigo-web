@@ -22,9 +22,7 @@
 @media (max-width: 768px) {
     .header {
         max-width: 90%;
-        /* Para telas menores, reduz o tamanho máximo */
         padding: 0 20px;
-        /* Adiciona padding para manter o conteúdo distante das bordas */
     }
 }
 

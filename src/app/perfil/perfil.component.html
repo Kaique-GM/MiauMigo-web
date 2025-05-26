@@ -1,1 +1,654 @@
-<p>perfil works!</p>
+<div class="vendedor-container">
+    <!-- Cabeçalho do perfil -->
+    <div class="perfil-header">
+      <div class="perfil-cover">
+        <img src="/Perfil/capa.avif" alt="Capa da loja" class="cover-image">
+        <button class="edit-cover-btn"><i class="fa fa-camera"></i> Alterar capa</button>
+      </div>
+      
+      <div class="perfil-info">
+        <div class="perfil-avatar">
+          <img src="/Perfil/logoExemplo.jpg" alt="Logo da loja" class="avatar-image">
+          <button class="edit-avatar-btn"><i class="fa fa-camera"></i></button>
+        </div>
+        
+        <div class="perfil-details">
+          <h1 class="perfil-name">Pet Shop do Carlos</h1>
+          <p class="perfil-bio">Tudo para o seu pet, em um só lugar! Produtos de qualidade com preços acessíveis.</p>
+          <div class="perfil-stats">
+            <div class="stat-item">
+              <span class="stat-value">4.8</span>
+              <span class="stat-label">Avaliação</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">186</span>
+              <span class="stat-label">Vendas</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">42</span>
+              <span class="stat-label">Produtos</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="perfil-actions">
+          <button class="primary-btn">Editar Perfil</button>
+          <button class="secondary-btn">Compartilhar Loja</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Conteúdo principal -->
+    <div class="perfil-content">
+      <div class="perfil-tabs">
+        <button class="tab-btn" [class.active]="activeTab === 'produtos'" (click)="changeTab('produtos')">
+          <i class="fa fa-tag"></i> Produtos Anunciados
+        </button>
+        <button class="tab-btn" [class.active]="activeTab === 'dashboard'" (click)="changeTab('dashboard')">
+          <i class="fa fa-chart-bar"></i> Dashboard
+        </button>
+        <button class="tab-btn" [class.active]="activeTab === 'sobre'" (click)="changeTab('sobre')">
+          <i class="fa fa-info-circle"></i> Sobre a Loja
+        </button>
+        <button class="tab-btn" [class.active]="activeTab === 'avaliacoes'" (click)="changeTab('avaliacoes')">
+          <i class="fa fa-star"></i> Avaliações
+        </button>
+      </div>
+      
+      <!-- Aba de Produtos -->
+      <div class="tab-content" *ngIf="activeTab === 'produtos'">
+        <div class="produtos-header">
+          <h2>Meus Produtos</h2>
+          <div class="produtos-actions">
+            <button class="add-produto-btn">
+              <i class="fa fa-plus"></i> Adicionar Produto
+            </button>
+            <div class="search-container">
+              <input type="text" placeholder="Buscar produtos..." class="search-input">
+              <button class="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="categorias-section">
+          <h3>Categorias <i class="fa fa-bone"></i></h3>
+          <div class="categorias-container">
+            <div class="categoria-item" *ngFor="let categoria of categorias" (click)="filtrarPorCategoria(categoria.id)" [class.active]="categoriaAtiva === categoria.id">
+              <div class="categoria-icon">
+                <img [src]="categoria.icone" [alt]="categoria.nome">
+              </div>
+              <span class="categoria-nome">{{categoria.nome}}</span>
+              <span class="categoria-count">{{categoria.quantidade}} Produtos</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="produtos-grid">
+          <div class="produto-card" *ngFor="let produto of produtosFiltrados">
+            <div class="produto-actions">
+              <button class="edit-btn"><i class="fa fa-edit"></i></button>
+              <button class="delete-btn"><i class="fa fa-trash"></i></button>
+            </div>
+            <div class="produto-image-container">
+              <img [src]="produto.imagem" [alt]="produto.nome" class="produto-image">
+              <span class="produto-status" *ngIf="produto.status === 'destaque'">Destaque</span>
+              <span class="produto-status produto-status-esgotado" *ngIf="produto.estoque === 0">Esgotado</span>
+            </div>
+            <div class="produto-info">
+              <h3 class="produto-nome">{{produto.nome}}</h3>
+              <div class="produto-categoria">{{produto.categoria}}</div>
+              <div class="produto-preco-container">
+                <span class="produto-preco-original" *ngIf="produto.precoOriginal">R$ {{produto.precoOriginal.toFixed(2)}}</span>
+                <span class="produto-preco">R$ {{produto.preco.toFixed(2)}}</span>
+              </div>
+              <div class="produto-stats">
+                <span class="produto-vendas"><i class="fa fa-shopping-cart"></i> {{produto.vendas}}</span>
+                <span class="produto-estoque"><i class="fa fa-box"></i> {{produto.estoque}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pagination">
+          <button class="page-btn" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <span class="page-info">Página {{currentPage}} de {{totalPages}}</span>
+          <button class="page-btn" [disabled]="currentPage === totalPages" (click)="changePage(currentPage + 1)">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Aba de Dashboard -->
+    <!-- Aba de Dashboard -->
+<div class="tab-content" *ngIf="activeTab === 'dashboard'">
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h2>Dashboard</h2>
+      <div class="period-selector">
+        <button class="period-btn active">Este Mês</button>
+        <button class="period-btn">Esta Semana</button>
+        <button class="period-btn">Hoje</button>
+        <button class="period-btn">Este Ano</button>
+      </div>
+    </div>
+    
+    <!-- Cards de métricas -->
+    <div class="dashboard-cards">
+      <div class="dashboard-card">
+        <div class="card-icon vendas-icon">
+          <i class="fa fa-shopping-cart"></i>
+        </div>
+        <div class="card-info">
+          <h3>Vendas</h3>
+          <p class="card-value">186</p>
+          <p class="card-change positive">
+            <i class="fa fa-arrow-up"></i>
+            15.2%
+          </p>
+        </div>
+      </div>
+      
+      <div class="dashboard-card">
+        <div class="card-icon receita-icon">
+          <i class="fa fa-dollar-sign"></i>
+        </div>
+        <div class="card-info">
+          <h3>Receita</h3>
+          <p class="card-value">R$ 9.870,50</p>
+          <p class="card-change positive">
+            <i class="fa fa-arrow-up"></i>
+            18.7%
+          </p>
+        </div>
+      </div>
+      
+      <div class="dashboard-card">
+        <div class="card-icon visitas-icon">
+          <i class="fa fa-eye"></i>
+        </div>
+        <div class="card-info">
+          <h3>Visitas</h3>
+          <p class="card-value">3.450</p>
+          <p class="card-change positive">
+            <i class="fa fa-arrow-up"></i>
+            12.3%
+          </p>
+        </div>
+      </div>
+      
+      <div class="dashboard-card">
+        <div class="card-icon avaliacao-icon">
+          <i class="fa fa-star"></i>
+        </div>
+        <div class="card-info">
+          <h3>Avaliação</h3>
+          <p class="card-value">4.8</p>
+          <p class="card-change positive">
+            <i class="fa fa-arrow-up"></i>
+            4.3%
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Gráficos -->
+    <div class="dashboard-charts-row">
+      <div class="chart-container">
+        <h3>Vendas por Período</h3>
+        <div class="chart-body">
+          <div class="bar-chart-container">
+            <div class="bar-chart">
+              <div class="chart-column">
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="height: 60%"></div>
+                </div>
+                <div class="chart-label">Sem 1</div>
+              </div>
+              <div class="chart-column">
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="height: 75%"></div>
+                </div>
+                <div class="chart-label">Sem 2</div>
+              </div>
+              <div class="chart-column">
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="height: 45%"></div>
+                </div>
+                <div class="chart-label">Sem 3</div>
+              </div>
+              <div class="chart-column">
+                <div class="chart-bar-wrapper">
+                  <div class="chart-bar" style="height: 90%"></div>
+                </div>
+                <div class="chart-label">Sem 4</div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-footer">
+            <span>Total: 186 vendas</span>
+            <span class="positive-change">+15.2% vs. mês anterior</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mantenha o resto do código igual -->
+    
+    
+      
+      <div class="chart-container">
+        <h3>Produtos Mais Vendidos</h3>
+        <div class="chart-body">
+          <div class="horizontal-bar-chart">
+            <div class="h-chart-row">
+              <div class="h-chart-label">Coleira Premium</div>
+              <div class="h-chart-bar-container">
+                <div class="h-chart-bar" style="width: 85%"></div>
+                <span class="h-chart-value">42</span>
+              </div>
+            </div>
+            <div class="h-chart-row">
+              <div class="h-chart-label">Ração Premium</div>
+              <div class="h-chart-bar-container">
+                <div class="h-chart-bar" style="width: 70%"></div>
+                <span class="h-chart-value">36</span>
+              </div>
+            </div>
+            <div class="h-chart-row">
+              <div class="h-chart-label">Cama Redonda</div>
+              <div class="h-chart-bar-container">
+                <div class="h-chart-bar" style="width: 55%"></div>
+                <span class="h-chart-value">28</span>
+              </div>
+            </div>
+            <div class="h-chart-row">
+              <div class="h-chart-label">Coleira Estampada</div>
+              <div class="h-chart-bar-container">
+                <div class="h-chart-bar" style="width: 45%"></div>
+                <span class="h-chart-value">22</span>
+              </div>
+            </div>
+            <div class="h-chart-row">
+              <div class="h-chart-label">Brinquedo Interativo</div>
+              <div class="h-chart-bar-container">
+                <div class="h-chart-bar" style="width: 35%"></div>
+                <span class="h-chart-value">19</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tabela de Últimas Vendas -->
+    <div class="dashboard-table-container">
+      <div class="table-header">
+        <h3>Últimas Vendas</h3>
+        <button class="view-all-btn">Ver Todas</button>
+      </div>
+      <div class="table-responsive">
+        <table class="dashboard-table">
+          <thead>
+            <tr>
+              <th>Pedido</th>
+              <th>Cliente</th>
+              <th>Produto</th>
+              <th>Data</th>
+              <th>Valor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#8742</td>
+              <td>Maria Silva</td>
+              <td>Coleira Premium para Cães</td>
+              <td>25/05/2025</td>
+              <td>R$ 49,90</td>
+              <td>
+                <span class="status-badge status-entregue">
+                  Entregue
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>#8741</td>
+              <td>João Oliveira</td>
+              <td>Ração Premium para Gatos</td>
+              <td>24/05/2025</td>
+              <td>R$ 89,90</td>
+              <td>
+                <span class="status-badge status-enviado">
+                  Enviado
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>#8740</td>
+              <td>Ana Santos</td>
+              <td>Cama Redonda para Cães</td>
+              <td>24/05/2025</td>
+              <td>R$ 129,90</td>
+              <td>
+                <span class="status-badge status-processando">
+                  Processando
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>#8739</td>
+              <td>Carlos Ferreira</td>
+              <td>Brinquedo Interativo</td>
+              <td>23/05/2025</td>
+              <td>R$ 59,90</td>
+              <td>
+                <span class="status-badge status-entregue">
+                  Entregue
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td>#8738</td>
+              <td>Juliana Costa</td>
+              <td>Shampoo Hidratante</td>
+              <td>22/05/2025</td>
+              <td>R$ 34,90</td>
+              <td>
+                <span class="status-badge status-cancelado">
+                  Cancelado
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Seção de duas colunas: Produtos com Baixo Estoque e Últimas Avaliações -->
+    <div class="dashboard-row">
+      <!-- Produtos com Baixo Estoque -->
+      <div class="dashboard-half">
+        <div class="dashboard-table-container">
+          <div class="table-header">
+            <h3>Produtos com Baixo Estoque</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="dashboard-table">
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Categoria</th>
+                  <th>Estoque</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Garrafa Portátil</td>
+                  <td>Acessórios</td>
+                  <td>
+                    <div class="estoque-indicator">
+                      <div class="estoque-bar">
+                        <div class="estoque-fill" style="width: 0%"></div>
+                      </div>
+                      <span>0</span>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="action-btn">Repor</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Cama Portátil</td>
+                  <td>Camas e Tocas</td>
+                  <td>
+                    <div class="estoque-indicator">
+                      <div class="estoque-bar">
+                        <div class="estoque-fill" style="width: 25%"></div>
+                      </div>
+                      <span>5</span>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="action-btn">Repor</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Snack Saudável</td>
+                  <td>Rações</td>
+                  <td>
+                    <div class="estoque-indicator">
+                      <div class="estoque-bar">
+                        <div class="estoque-fill" style="width: 40%"></div>
+                      </div>
+                      <span>8</span>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="action-btn">Repor</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Últimas Avaliações -->
+      <div class="dashboard-half">
+        <div class="dashboard-table-container">
+          <div class="table-header">
+            <h3>Últimas Avaliações</h3>
+          </div>
+          <div class="table-responsive">
+            <div class="mini-avaliacoes">
+              <div class="mini-avaliacao">
+                <div class="mini-avaliacao-header">
+                  <div class="mini-avatar">M</div>
+                  <div>
+                    <h4>Maria Silva</h4>
+                    <div class="mini-estrelas">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                  <span class="mini-data">15/05/2025</span>
+                </div>
+                <p class="mini-comentario">Produto excelente! Meu cachorro adorou a coleira, muito confortável e resistente. Recomendo a todos.</p>
+                <div class="mini-produto">
+                  <span>Produto: </span>
+                  <a href="#">Coleira Premium para Cães</a>
+                </div>
+              </div>
+              
+              <div class="mini-avaliacao">
+                <div class="mini-avaliacao-header">
+                  <div class="mini-avatar">J</div>
+                  <div>
+                    <h4>João Oliveira</h4>
+                    <div class="mini-estrelas">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-o"></i>
+                    </div>
+                  </div>
+                  <span class="mini-data">10/05/2025</span>
+                </div>
+                <p class="mini-comentario">Cama muito boa, meu cachorro adorou. Só achei um pouco menor do que esperava, mas a qualidade é ótima.</p>
+                <div class="mini-produto">
+                  <span>Produto: </span>
+                  <a href="#">Cama Redonda para Cães</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+      <!-- Aba Sobre a Loja -->
+      <div class="tab-content" *ngIf="activeTab === 'sobre'">
+        <div class="sobre-section">
+          <h2>Informações da Loja</h2>
+          <div class="info-item">
+            <span class="info-label">Nome:</span>
+            <span class="info-value">Pet Shop do Carlos</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Email:</span>
+            <span class="info-value">contato&#64;petshopcarlos.com.br</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Telefone:</span>
+            <span class="info-value">(11) 98765-4321</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Endereço:</span>
+            <span class="info-value">Av. Paulista, 1000 - São Paulo, SP</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Horário:</span>
+            <span class="info-value">Segunda a Sábado, 9h às 18h</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Desde:</span>
+            <span class="info-value">Janeiro de 2020</span>
+          </div>
+          
+          <h3>Sobre Nós</h3>
+          <p class="sobre-descricao">
+            O Pet Shop do Carlos nasceu da paixão por animais e do desejo de oferecer produtos de qualidade para os pets. 
+            Começamos como uma pequena loja de bairro e hoje atendemos clientes em todo o Brasil através da nossa loja online.
+            Nossa missão é proporcionar bem-estar e felicidade para os animais de estimação e seus tutores, 
+            oferecendo produtos selecionados, atendimento personalizado e preços justos.
+          </p>
+          
+          <h3>Políticas da Loja</h3>
+          <div class="politicas-container">
+            <div class="politica-item">
+              <i class="fa fa-truck"></i>
+              <h4>Entrega</h4>
+              <p>Entregamos para todo o Brasil. Frete grátis para compras acima de R$ 150,00.</p>
+            </div>
+            <div class="politica-item">
+              <i class="fa fa-exchange-alt"></i>
+              <h4>Trocas e Devoluções</h4>
+              <p>Você tem até 7 dias para solicitar a troca ou devolução de produtos.</p>
+            </div>
+            <div class="politica-item">
+              <i class="fa fa-credit-card"></i>
+              <h4>Pagamento</h4>
+              <p>Aceitamos cartões de crédito, débito, boleto bancário e Pix.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Aba de Avaliações -->
+      <div class="tab-content" *ngIf="activeTab === 'avaliacoes'">
+        <div class="avaliacoes-section">
+          <h2>Avaliações dos Clientes</h2>
+          <div class="avaliacao-resumo">
+            <div class="avaliacao-media">
+              <span class="media-valor">4.8</span>
+              <div class="estrelas">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-alt"></i>
+              </div>
+              <span class="total-avaliacoes">Baseado em 124 avaliações</span>
+            </div>
+            <div class="avaliacao-barras">
+              <div class="barra-item">
+                <span class="barra-label">5 estrelas</span>
+                <div class="barra-container">
+                  <div class="barra-fill" style="width: 75%"></div>
+                </div>
+                <span class="barra-percent">75%</span>
+              </div>
+              <div class="barra-item">
+                <span class="barra-label">4 estrelas</span>
+                <div class="barra-container">
+                  <div class="barra-fill" style="width: 20%"></div>
+                </div>
+                <span class="barra-percent">20%</span>
+              </div>
+              <div class="barra-item">
+                <span class="barra-label">3 estrelas</span>
+                <div class="barra-container">
+                  <div class="barra-fill" style="width: 3%"></div>
+                </div>
+                <span class="barra-percent">3%</span>
+              </div>
+              <div class="barra-item">
+                <span class="barra-label">2 estrelas</span>
+                <div class="barra-container">
+                  <div class="barra-fill" style="width: 1%"></div>
+                </div>
+                <span class="barra-percent">1%</span>
+              </div>
+              <div class="barra-item">
+                <span class="barra-label">1 estrela</span>
+                <div class="barra-container">
+                  <div class="barra-fill" style="width: 1%"></div>
+                </div>
+                <span class="barra-percent">1%</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="avaliacoes-lista">
+            <div class="avaliacao-item" *ngFor="let avaliacao of avaliacoes">
+              <div class="avaliacao-header">
+                <img [src]="avaliacao.avatar" [alt]="avaliacao.cliente" class="avaliacao-avatar">
+                <div class="avaliacao-info">
+                  <h4 class="avaliacao-cliente">{{avaliacao.cliente}}</h4>
+                  <div class="avaliacao-estrelas">
+                    <i class="fa fa-star" *ngFor="let star of [].constructor(avaliacao.estrelas)"></i>
+                  </div>
+                  <span class="avaliacao-data">{{avaliacao.data}}</span>
+                </div>
+              </div>
+              <div class="avaliacao-produto">
+                <span>Produto: </span>
+                <a [href]="'#produto/' + avaliacao.produtoId">{{avaliacao.produtoNome}}</a>
+              </div>
+              <p class="avaliacao-comentario">{{avaliacao.comentario}}</p>
+              <div class="avaliacao-fotos" *ngIf="avaliacao.fotos && avaliacao.fotos.length > 0">
+                <img *ngFor="let foto of avaliacao.fotos" [src]="foto" alt="Foto do cliente" class="avaliacao-foto">
+              </div>
+              <div class="avaliacao-resposta" *ngIf="avaliacao.resposta">
+                <h5>Resposta da loja:</h5>
+                <p>{{avaliacao.resposta}}</p>
+              </div>
+              <div class="avaliacao-actions" *ngIf="!avaliacao.resposta">
+                <button class="responder-btn">Responder</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pagination">
+            <button class="page-btn" [disabled]="avaliacoesPage === 1" (click)="changeAvaliacoesPage(avaliacoesPage - 1)">
+              <i class="fa fa-chevron-left"></i>
+            </button>
+            <span class="page-info">Página {{avaliacoesPage}} de {{avaliacoesTotalPages}}</span>
+            <button class="page-btn" [disabled]="avaliacoesPage === avaliacoesTotalPages" (click)="changeAvaliacoesPage(avaliacoesPage + 1)">
+              <i class="fa fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

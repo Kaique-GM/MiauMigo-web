@@ -1,0 +1,81 @@
+<body>
+  <div class="form-container">
+    <form #form="ngForm" (ngSubmit)="anunciarProduto()">
+
+      <div class="form-group">
+        <label>Título <span class="required">(obrigatório)</span></label>
+        <input type="text" name="titulo" [(ngModel)]="titulo" required #tituloRef="ngModel"
+          [class.input-error]="form.submitted && tituloRef.invalid">
+        <small>0/60</small>
+        <div *ngIf="form.submitted && tituloRef.invalid" class="error-text">
+          Campo obrigatório.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Preço <span class="required">(obrigatório)</span></label>
+        <input type="text" name="preco" [(ngModel)]="preco" required placeholder="Ex: 19.99" />
+      </div>
+
+      <div class="form-group">
+        <label>Categoria <span class="required">(obrigatório)</span></label>
+        <select name="categoria" [(ngModel)]="categoria" required>
+          <option value="" disabled selected>Selecione uma categoria</option>
+          <option value="acessorios">Acessórios</option>
+          <option value="camas">Camas</option>
+          <option value="higiene">Higiene</option>
+          <option value="racoes">Rações</option>
+        </select>
+      </div>
+
+
+      <div class="upload-box">
+
+        <label class="upload-label" *ngIf="!imagemPreview">
+          <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+          <span class="plus-icon">+</span>
+        </label>
+
+        <div class="image-preview" *ngIf="imagemPreview">
+          <img [src]="imagemPreview" alt="Preview da imagem" />
+          <button class="remove-btn" (click)="removerImagem()">×</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label>Quantidade <span class="required">(obrigatório)</span></label>
+          <input type="number" placeholder="unidades" [(ngModel)]="quantidade" required>
+        </div>
+
+        <div class="form-group">
+          <label>Código de identificação</label>
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Descrição</label>
+        <input type="text" name='descricao' [(ngModel)]="descricao" placeholder="Descreva seu produto...">
+        <small>0/1000</small>
+      </div>
+
+      <!-- Botão Anunciar dentro do form -->
+      <div class="form-group center-button">
+        <button type="submit" class="submit-button">Anunciar!</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Mensagem de erro -->
+  <div *ngIf="!produtoAnunciado" class="alert error-alert">
+    Por favor, preencha todos os campos obrigatórios.
+  </div>
+
+  <!-- Mensagem de sucesso -->
+  <div *ngIf="produtoAnunciado" class="alert success-alert">
+    Produto anunciado com sucesso!
+  </div>
+
+
+</body>

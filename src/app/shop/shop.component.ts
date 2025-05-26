@@ -14,6 +14,7 @@ import { StorageService } from '../services/localStorage';
 export class ShopComponent implements OnInit {
   filter: string = '';
   category: string = '';
+  caminhoImg: string = '';
 
   constructor(private route: ActivatedRoute, private router: Router, private service: StorageService) { }
 
@@ -22,6 +23,20 @@ export class ShopComponent implements OnInit {
       this.filter = params['search'] || '';
       this.category = params['category'] || '';
     });
+
+    const novoProduto = localStorage.getItem('produtoInfo');
+
+    if (novoProduto !== null) {
+      const produto = JSON.parse(novoProduto);
+
+      produto.id = this.ultimoId();
+      this.caminhoImg = '/Anunciar/' + produto.Image;
+      produto.Image = this.caminhoImg;
+      this.produtos.push(produto);
+
+      localStorage.removeItem('produtoInfo')
+    }
+
   }
 
   categorias = [
@@ -46,7 +61,7 @@ export class ShopComponent implements OnInit {
     { id: 22, nome: "Ração Light para Gatos Castrados", preco: "R$ 45,90", categoria: "racoes", Image: "/Shop/produtos/racao_4.jpeg", descricao: "Especialmente desenvolvida para gatos castrados, ajuda no controle de peso e bem-estar.", nota: 2, vendedor: "NutriPet" },
     { id: 23, nome: "Snack Saudável para Cães", preco: "R$ 12,99", categoria: "racoes", Image: "/Shop/produtos/racao_3.jpeg", descricao: "Petisco natural e nutritivo, ideal como recompensa no adestramento ou mimo diário.", nota: 3, vendedor: "PetVibe" }
   ];
-  
+
 
   selectedCategory(categoriaSelecionada: string) {
     this.filter = '';
@@ -85,5 +100,10 @@ export class ShopComponent implements OnInit {
       vendedor: produto.vendedor,
     }
     this.service.setLocal('produtoInfo', dados);
+  }
+
+
+  ultimoId(): number {
+    return this.produtos.length ? Math.max(...this.produtos.map(c => c.id)) : 0;
   }
 }

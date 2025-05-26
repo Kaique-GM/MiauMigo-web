@@ -3,6 +3,7 @@
         <div class="logo">
             <img (click)="home()" src="/Icons/Logo(SemFundo).png" alt="Logo">
         </div>
+
         <div class="center">
             <div class="search-arrow">
                 <div class="search">
@@ -12,8 +13,8 @@
                 <div class="arrow-down"></div>
             </div>
         </div>
-        <div class="right">
 
+        <div class="right">
             <div class="icons">
                 <div class="icon">
                     <img src="/Header/favorite.png" alt="heart" class="icon-img">
@@ -38,7 +39,6 @@
                 </div>
             </div>
         </div>
-
     </nav>
 </header>
 
@@ -46,6 +46,8 @@
     <ul>
         <li class="nav-item"><a routerLink="home" routerLinkActive="active" class="nav-link"
                 aria-current="page">Home</a></li>
+        <li *ngIf="tipo === 'vendedor'" class="nav-item"><a routerLink="anunciar" routerLinkActive="active" class="nav-link"
+                aria-current="page">Anunciar</a></li>
         <li class="nav-item"><a routerLink="shop" routerLinkActive="active" class="nav-link"
                 aria-current="page">Shop</a></li>
         <li class="nav-item"><a routerLink="about" routerLinkActive="active" class="nav-link" aria-current="page">Quem
