@@ -14,19 +14,19 @@ body {
 
 .coracao {
   position: absolute;
-  top: -45px;
-  left: 34.5%;
+  top: -145%;
+  right: 60%;
   height: 95px;
-  width: 95px;
+  width: auto;
   transform: rotate(-35deg);
 }
 
 .search_icon {
   position: absolute;
-  top: -35px;
-  right: 33%;
+  top: -175%;
+  left: 60%;
   height: 100px;
-  width: 100px;
+  width: auto;
 }
 
 .paw {

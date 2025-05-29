@@ -187,18 +187,20 @@ body {
   border-radius: 15px;
 }
 
-.membro h4 {
-  color: #005F83;
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin: 5px;
-  margin-bottom: -1px;
+
+.linkd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-.membro p {
+.nome {
+  margin-top: 10px;
+  font-size: 1.4rem;
   color: #005F83;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .img_dog {
