@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
         this.img = "/Login/" + usuario.Image;
       }
     }
-    
+
   }
 
   session: boolean = false;
@@ -61,6 +61,9 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.session = false;
+    localStorage.clear();
+    this.tipo = '';
+    this.router.navigate(['/home']);
   }
 
 }
