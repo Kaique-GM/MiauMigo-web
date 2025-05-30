@@ -1,7 +1,7 @@
 <body>
 
     <div class="catalog-container">
-        
+
         <div class="title">
             <img src="/Footer/footer.png" alt="Patinhas esquerda" class="paw left-paw">
             <h2><img src="/Icons/coracao_1.png" alt="" class="coracao"> Navegue por Categoria <img
@@ -63,7 +63,7 @@
             <div class="cards-container">
                 <div class="cards" *ngFor="let produto of filtered" (click)="buy(produto)">
                     <img [src]="produto.Image" alt="">
-                    <img src="/Icons/setas_coracao_3.png" alt="" class="setas">
+                    <span class="cora-circular">♡</span>
                     <h3>{{produto.nome}}</h3>
                     <p>{{produto.preco}}</p>
                 </div>

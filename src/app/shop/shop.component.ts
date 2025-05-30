@@ -24,7 +24,7 @@ export class ShopComponent implements OnInit {
       this.category = params['category'] || '';
     });
 
-    const novoProduto = localStorage.getItem('produtoInfo');
+    const novoProduto = localStorage.getItem('novoProduto');
 
     if (novoProduto !== null) {
       const produto = JSON.parse(novoProduto);
@@ -34,7 +34,6 @@ export class ShopComponent implements OnInit {
       produto.Image = this.caminhoImg;
       this.produtos.push(produto);
 
-      localStorage.removeItem('produtoInfo')
     }
 
   }

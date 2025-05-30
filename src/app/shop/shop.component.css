@@ -110,14 +110,29 @@ body {
   }
 }
 
-/* Corações dos cards */
-.setas {
-  height: 40px !important;
-  width: 40px !important;
-  position: absolute;
-  right: 5px;
-  margin-top: 7px;
-}
+.cora-circular {
+      position: absolute;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(214, 214, 214, 0.285);
+      color: #FFDE59;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 32px;
+      font-weight: bold;
+      margin: 13%;
+      margin-left: 38%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+  }
+
+  .cora-circular:hover {
+      background-color: #FFDE59;
+      color: #005F83;
+      cursor: pointer;
+  }
 
 /* Cards Produtos */
 .cards-container {
@@ -156,18 +171,17 @@ body {
 
 .cards h3 {
   text-align: left;
-  font-size: 18px;
-  margin-top: 15px;
-  margin-left: 15px;
+  font-size: 1.1rem;
+  margin-top: 5%;
+  margin-left: 4%;
   color: #552A0F;
   font-weight: bold;
 }
 
 .cards p {
   text-align: left;
-  font-size: 14px;
-  margin-top: 10px;
-  margin-left: 15px;
+  font-size: 1rem;
+  margin-left: 4%;
   color: #552A0F;
   font-weight: bold;
 }

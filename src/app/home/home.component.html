@@ -18,7 +18,7 @@
         <div class="cards-container-categ">
             <div class="card-categ" *ngFor=" let categoria of categorias" (click)="shop(categoria.categoria)">
                 <img [src]="categoria.Image" alt="">
-                <img src="/Icons/seta_1.png" alt="" class="setas">
+                <span class="seta-circular">&#10140;</span>
                 <h3>{{categoria.nome}}</h3>
                 <p>{{categoria.quant}} Produtos</p>
             </div>
@@ -36,7 +36,7 @@
         <div class="cards-container-premium">
             <div class="card-premium" *ngFor="let premium of linha_premium" (click)="buy(premium)">
                 <img [src]="premium.Image" alt="">
-                <img src="/Icons/setas_coracao.png" alt="" class="setas">
+                <span class="cora-circular">♡</span>
                 <h3>{{premium.nome}}</h3>
                 <p>{{premium.preco}}</p>
             </div>
@@ -54,7 +54,7 @@
         <div class="cards-container-sucess">
             <div class="card-sucess" *ngFor="let top of top_vendas" (click)="buy(top)">
                 <img [src]="top.Image" alt="">
-                <img src="/Icons/setas_coracao_2.png" alt="" class="setas">
+                <span class="cora-top-circular">♡</span>
                 <h3>{{top.nome}}</h3>
                 <p>{{top.preco}}</p>
             </div>

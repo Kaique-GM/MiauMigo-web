@@ -63,6 +63,7 @@ export class AnunciarComponent {
   anunciarProduto() {
     if (this.form.invalid) {
       this.produtoAnunciado = false;
+      return;
     }
 
     this.produto.nome = this.titulo;
@@ -72,9 +73,9 @@ export class AnunciarComponent {
     this.produto.vendedor = this.nomeLoja;
     this.produto.preco = this.preco;
 
-    this.service.setLocal('produtoInfo' , this.produto);
+    this.service.setLocal('novoProduto', this.produto);
     this.produtoAnunciado = true;
-  
+    this.router.navigate(['/shop']);
   }
 
 }
