@@ -63,7 +63,7 @@ export class PerfilComponent implements OnInit {
   currentPage: number = 1;
   totalPages: number = 1;
   itemsPerPage: number = 8;
-
+  
   // Dashboard
   periodoAtivo: string = 'mes';
   dashboardData: DashboardData = {
@@ -76,59 +76,59 @@ export class PerfilComponent implements OnInit {
     avaliacao: 0,
     avaliacaoVariacao: 0
   };
-
+  
   // Avaliações
   avaliacoes: Avaliacao[] = [];
   avaliacoesPage: number = 1;
   avaliacoesTotalPages: number = 1;
-
+  
   // Expor Math para usar no template
   Math = Math;
-
+  
   constructor() { }
-
+  
   ngOnInit(): void {
     this.carregarCategorias();
     this.carregarProdutos();
     this.carregarDashboard();
     this.carregarAvaliacoes();
   }
-
+  
   changeTab(tab: string): void {
     this.activeTab = tab;
   }
-
+  
   carregarCategorias(): void {
     // Simulação de dados de categorias
     this.categorias = [
       {
         id: 1,
         nome: 'Acessórios',
-        icone: '/Home/img_acessorios.jpeg',
+        icone: '/perfil/acessorios.jpeg',
         quantidade: 84
       },
       {
         id: 2,
         nome: 'Rações',
-        icone: '/Home/img_racoes.jpeg',
+        icone: '/Perfil/racoes.jpeg',
         quantidade: 64
       },
       {
         id: 3,
         nome: 'Camas e Tocas',
-        icone: '/Home/img_camas.jpeg',
+        icone: '/Perfil/camas.jpeg',
         quantidade: 22
       },
       {
         id: 4,
         nome: 'Higiene',
-        icone: '/Home/img_higiene.jpeg',
+        icone: '/Perfil/higiene.jpeg',
         quantidade: 16
       }
-
+      
     ];
   }
-
+  
   carregarProdutos(): void {
     // Simulação de dados de produtos
     this.produtos = [
@@ -139,7 +139,7 @@ export class PerfilComponent implements OnInit {
         categoriaId: 1,
         preco: 49.90,
         precoOriginal: 69.90,
-        imagem: '/Shop/produtos/acc_1.jpeg',
+        imagem: '/Perfil/coleira.jpeg',
         descricao: 'Coleira premium para cães de todos os tamanhos, feita com material resistente e confortável.',
         estoque: 25,
         vendas: 42,
@@ -151,7 +151,7 @@ export class PerfilComponent implements OnInit {
         categoria: 'Rações',
         categoriaId: 2,
         preco: 89.90,
-        imagem: '/Shop/produtos/racao_2.jpeg',
+        imagem: '/Perfil/racao.jpeg',
         descricao: 'Ração premium para gatos adultos, rica em nutrientes essenciais para a saúde do seu pet.',
         estoque: 18,
         vendas: 36
@@ -163,7 +163,7 @@ export class PerfilComponent implements OnInit {
         categoriaId: 3,
         preco: 129.90,
         precoOriginal: 159.90,
-        imagem: '/Shop/produtos/cama_1.jpeg',
+        imagem: '/Perfil/cama.jpeg',
         descricao: 'Cama redonda super macia e confortável para cães de todos os tamanhos.',
         estoque: 12,
         vendas: 28,
@@ -175,7 +175,7 @@ export class PerfilComponent implements OnInit {
         categoria: 'Acessórios',
         categoriaId: 1,
         preco: 34.90,
-        imagem: '/Shop/produtos/acc_4.jpeg',
+        imagem: '/Perfil/coleiraGato.jpeg',
         descricao: 'Coleira charmosa com estampa divertida, pensada para conforto e estilo dos felinos.',
         estoque: 30,
         vendas: 22
@@ -186,7 +186,7 @@ export class PerfilComponent implements OnInit {
         categoria: 'Brinquedos',
         categoriaId: 1,
         preco: 59.90,
-        imagem: '/Shop/produtos/acc_2.jpeg',
+        imagem: '/Perfil/brinquedo.jpeg',
         descricao: 'Brinquedo interativo para estimular a atividade física e mental do seu gato.',
         estoque: 15,
         vendas: 19,
@@ -198,7 +198,7 @@ export class PerfilComponent implements OnInit {
         categoria: 'Rações',
         categoriaId: 2,
         preco: 99.90,
-        imagem: '/Shop/produtos/racao_1.jpeg',
+        imagem: '/Perfil/racao_1.jpeg',
         descricao: 'Ração premium para cães filhotes, rica em proteínas e nutrientes para o desenvolvimento saudável.',
         estoque: 22,
         vendas: 31
@@ -210,7 +210,7 @@ export class PerfilComponent implements OnInit {
         categoriaId: 2,
         preco: 12.99,
         precoOriginal: 12.99,
-        imagem: '/Shop/produtos/racao_3.jpeg',
+        imagem: '/Perfil/petisco.jpeg',
         descricao: 'Petisco natural e nutritivo, ideal como recompensa no adestramento ou mimo diário.',
         estoque: 8,
         vendas: 15,
@@ -222,7 +222,7 @@ export class PerfilComponent implements OnInit {
         categoria: 'Acessórios',
         categoriaId: 1,
         preco: 29.99,
-        imagem: '/Shop/produtos/acc_3.jpeg',
+        imagem: '/Perfil/garrafa.jpeg',
         descricao: 'Ideal para passeios, essa garrafa mantém seu pet hidratado com praticidade.',
         estoque: 0,
         vendas: 27
@@ -233,7 +233,7 @@ export class PerfilComponent implements OnInit {
         categoria: 'Camas e Tocas',
         categoriaId: 3,
         preco: 199.90,
-        imagem: '/Shop/produtos/cama_3.jpeg',
+        imagem: '/Perfil/camaPequena.jpeg',
         descricao: 'Leve e dobrável, essa caminha é ideal para viagens e deslocamentos com seu pet.',
         estoque: 5,
         vendas: 12,
@@ -245,18 +245,18 @@ export class PerfilComponent implements OnInit {
         categoria: 'Brinquedos',
         categoriaId: 1,
         preco: 10.99,
-        imagem: '/Home/briquendo_dog_1.jpeg',
+        imagem: '/Perfil/osso.jpeg',
         descricao: 'Brinquedo em formato de osso, resistente e atrativo para cães.',
         estoque: 35,
         vendas: 48
       }
     ];
-
+    
     // Inicializa produtos filtrados com todos os produtos
     this.produtosFiltrados = [...this.produtos];
     this.calcularTotalPages();
   }
-
+  
   carregarDashboard(): void {
     // Simulação de dados do dashboard
     const dashboardPorPeriodo = {
@@ -301,10 +301,10 @@ export class PerfilComponent implements OnInit {
         avaliacaoVariacao: 6.8
       }
     };
-
+    
     this.dashboardData = dashboardPorPeriodo[this.periodoAtivo as keyof typeof dashboardPorPeriodo];
   }
-
+  
   carregarAvaliacoes(): void {
     // Simulação de dados de avaliações
     this.avaliacoes = [
@@ -343,57 +343,57 @@ export class PerfilComponent implements OnInit {
         resposta: 'Olá Ana! Agradecemos sua avaliação. É muito gratificante saber que seu gatinho está se divertindo com nosso produto!'
       }
     ];
-
+    
     this.avaliacoesTotalPages = 1;
   }
-
+  
   filtrarPorCategoria(categoriaId: number | null): void {
     this.categoriaAtiva = categoriaId;
-
+    
     if (categoriaId === null) {
       this.produtosFiltrados = [...this.produtos];
     } else {
       this.produtosFiltrados = this.produtos.filter(produto => produto.categoriaId === categoriaId);
     }
-
+    
     this.currentPage = 1;
     this.calcularTotalPages();
   }
-
+  
   calcularTotalPages(): void {
     this.totalPages = Math.ceil(this.produtosFiltrados.length / this.itemsPerPage);
   }
-
+  
   changePage(page: number): void {
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
     }
   }
-
+  
   mudarPeriodo(periodo: string): void {
     this.periodoAtivo = periodo;
     this.carregarDashboard();
   }
-
+  
   changeAvaliacoesPage(page: number): void {
     if (page >= 1 && page <= this.avaliacoesTotalPages) {
       this.avaliacoesPage = page;
     }
   }
-
+  
   // Métodos para gerenciamento de produtos
   adicionarProduto(): void {
     console.log('Adicionar novo produto');
   }
-
+  
   editarProduto(produtoId: number): void {
     console.log('Editar produto:', produtoId);
   }
-
+  
   excluirProduto(produtoId: number): void {
     console.log('Excluir produto:', produtoId);
   }
-
+  
   // Métodos para avaliações
   responderAvaliacao(avaliacaoId: number, resposta: string): void {
     console.log('Responder avaliação:', avaliacaoId, resposta);
