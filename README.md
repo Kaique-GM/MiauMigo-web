@@ -5,6 +5,7 @@
   <img src="./public/Icons/Logo(SemFundo).png" width="350" />
   <img src="./public/Readme/food.png" width="200" />
 </p>
+
 <div align="center">
 
 <!-- ------------------ -->
@@ -19,24 +20,25 @@ Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e
 
 <img src="./public/Readme/FFDE59_solid.png" height = "4px" width= "1000">
 
+
 <div align="center">
 
-<!-- ------------------ -->
+<h2>📑 Índice</h2>
 
-<!-- Estrutura do Site -->
-## 🔍 **Estrutura do Site**  
+|  |  |
+|----------|-----------|
+| [🦴 Descrição](#-🦴-descrição) | [👥 Integrantes](#-🦴-integrantes) | 
+| [🎯 Objetivo](#-objetivo) | [🌟 Diferenciais](#-🦔-🦎-diferenciais) |
+| [🛠️ Como Usar](#-como-usar) | [🎥 Demo](#-demo) |
+| [🖼️ Tela de Demonstração](#-tela-de-demonstracão) | [🧪 Tecnologias Utilizadas](#-tecnologias-utilizadas) |
+|
 
 </div>
 
-🚧🛠️ **Em desenvolvimento...** 🐾  
 
 <img src="./public/Readme/005F83_solid.png" height = "4px" width= "1000">
 
 <div align="center">
-
-<!-- ------------------ -->
-
-<!-- Objetivo -->
 
 ## 🎯 **Objetivo**  
 
@@ -46,66 +48,68 @@ Facilitar a transição digital de micro, pequenas e médias empresas (MPEs) �
 A proposta busca impulsionar o crescimento sustentável 🌱📈 desse mercado, ao mesmo tempo em que promove o impacto social 🌍🐕‍🦺, destinando parte dos lucros 💸💛 ao apoio de ONGs que resgatam e cuidam de animais em situação de vulnerabilidade 🐾🏠✨.
 <img src="./public/Readme/FA7268_solid.png" height = "4px" width= "1000">
 
-
-<!-- ------------------ -->
-
-<!-- Diferenciais -->
 <div align="center">
 
 ## 🦔 🦎 **Diferenciais**:
 
 </div>
 
-🐾💙🛒 Miguamigo Shop é mais do que um simples e-commerce pet — é uma ponte entre empresas 🏪 e consumidores 🐶👩‍💻, promovendo a transformação digital 📲 e fortalecendo o mercado pet com empatia e inovação.
+🐾💙🛒 MiauMigo Shop é mais do que um simples e-commerce pet...
+ é mais do que um simples e-commerce pet — é uma ponte entre empresas 🏪 e consumidores 🐶👩‍💻, promovendo a transformação digital 📲 e fortalecendo o mercado pet com empatia e inovação.
 O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de resgate animal 🐕‍🦺🏠, unindo propósito, tecnologia e solidariedade para construir um futuro mais conectado e humano. 🌐💞🐾
 
 <img src="./public/Readme/D9A441_solid.png" height = "4px" width= "1000">
 
 <div align="center">
 
-<!-- ------------------ -->
-
-<!-- Como usar -->
-## 🐶 Como Usar
-
-</div>
-
-
-🚧🛠️ **Em desenvolvimento...** 🐾 
-
-<img src="./public/Readme/552A0F_solid.png" height = "4px" width= "1000">
-
-
-<!-- ------------------ -->
-
-<!-- Demo -->
-<div align="center">
-
 ## 🌐 Demo  
 
 </div>
 
+🚀 Quer ver o projeto funcionando? Acesse aqui:
 
-🚧🛠️ **Em desenvolvimento...** 🐾 
+🔗 [👉 Clique aqui para visualizar o site](https://miau-migo-web.vercel.app/home)
+
+>⚠️ **Atenção:** O site ainda está em processo de adaptação para dispositivos móveis.📱Recomendamos o uso em um <strong>computador</strong> 💻 para melhor experiência de navegação!
 
 
-<img src="./public/Readme/005F83_solid.png" height = "4px" width= "1000">
+<img src="./public/Readme/552A0F_solid.png" height = "4px" width= "1000">
 
-<!-- ------------------ -->
 
-<!-- Tela de Demonstração -->
-<div align="center">
+<h2 align="center">📊 Tela de Demonstração</h2>
 
-## 📊 Tela de Demonstração
+<table style="border-spacing: 8px; width: 100%;">
+  <tr>
+    <th style="text-align: center; vertical-align: top; padding-bottom: 8px;">🏠 Home</th>
+    <th style="text-align: center; vertical-align: top; padding-bottom: 8px;">🔐 Login</th>
+    <th style="text-align: center; vertical-align: top; padding-bottom: 8px;">🛒 Produtos</th>
+  </tr>
+  <tr>
+    <td style="vertical-align: top; padding: 0;">
+      <img src="./public/Readme/print_home.png" style="display: block; margin: 0; padding: 0; width: 100%;" alt="Home 1" />
+      <img src="./public/Readme/print_home4.png" style="display: block; margin: 0; padding: 0; width: 100%;" alt="Home 2" />
+      <img src="./public/Readme/print_home1.png" style="display: block; margin: 0; padding: 0; width: 100%;" alt="Home 3" />
+      <img src="./public/Readme/print_home5.png" style="display: block; margin: 0; padding: 0; width: 100%;" alt="Home 4" />
+    </td>
+    <td style="vertical-align: top; padding: 0 8px;">
+      <p style="margin: 4px 0; font-weight: bold;">Login geral</p>
+      <img src="./public/Readme/login.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Login" />
+      <p style="margin: 4px 0; font-weight: bold;">Login para cliente</p>
+      <img src="./public/Readme/clienteLog.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Login Cliente" />
+      <p style="margin: 4px 0; font-weight: bold;">Login para vendedor</p>
+      <img src="./public/Readme/vendedorLog.png" style="display: block; width: 100%;" alt="Login Vendedor" />
+    </td>
+    <td style="vertical-align: top; padding: 0;">
+      <p style="margin: 4px 0; font-weight: bold;">Tela dos produtos</p>
+      <img src="./public/Readme/Shop.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Produtos" />
+      <p style="margin: 4px 0; font-weight: bold;">Detalhes do produto</p>
+      <img src="./public/Readme/ShopDet.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Detalhes Produto" />
+      <p style="margin: 4px 0; font-weight: bold;">Tela de perfil do vendedor</p>
+      <img src="./public/Readme/perfil.png" style="display: block; width: 100%;" alt="Perfil Vendedor" />
+    </td>
+  </tr>
+</table>
 
-</div>
-  
-<div align="center">
-  <img src="./public/Readme/print_home.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./public/Readme/print_home4.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./public/Readme/print_home1.png" style="display: block; margin: 0; padding: 0;" />
-  <img src="./public/Readme/print_home5.png" style="display: block; margin: 0; padding: 0;" />
-</div>
 
 
 
@@ -124,8 +128,6 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
 ![BootStrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white) 
 
 </div>
-
-🚧🛠️ **Em desenvolvimento...** 🐾 
 
 <img src="./public/Readme/FA7268_solid.png" height = "4px" width= "1000">
 
