@@ -27,11 +27,10 @@ Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e
 
 |  |  |
 |----------|-----------|
-| [🦴 Descrição](#-descrição) | [🖼️ Tela de Demonstração](#-tela-de-demonstracão) | 
+| [🦴 Descrição](#-descrição) | [🖼️ Tela de Demonstração](#-tela-de-demonstracao)| 
 | [🎯 Objetivo](#-objetivo) | [🧪 Tecnologias Utilizadas](#-tecnologias-utilizadas) |
 |[🌟 Diferenciais](#-diferenciais) | [👥 Integrantes](#-integrantes) |
-|[🎥 Demo](#-demo)  |  |
-|
+|[🎥 Demo](#-demo)  |
 
 </div>
 
@@ -50,12 +49,11 @@ A proposta busca impulsionar o crescimento sustentável 🌱📈 desse mercado, 
 
 <div align="center">
 
-## 🦔 🦎 **Diferenciais**:
+## 🦔 🦎 **Diferenciais**
 
 </div>
 
-🐾💙🛒 MiauMigo Shop é mais do que um simples e-commerce pet...
- é mais do que um simples e-commerce pet — é uma ponte entre empresas 🏪 e consumidores 🐶👩‍💻, promovendo a transformação digital 📲 e fortalecendo o mercado pet com empatia e inovação.
+🐾💙🛒 MiauMigo Shop é mais do que um simples e-commerce pet — é uma ponte entre empresas 🏪 e consumidores 🐶👩‍💻, promovendo a transformação digital 📲 e fortalecendo o mercado pet com empatia e inovação.
 O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de resgate animal 🐕‍🦺🏠, unindo propósito, tecnologia e solidariedade para construir um futuro mais conectado e humano. 🌐💞🐾
 
 <img src="./public/Readme/D9A441_solid.png" height = "4px" width= "1000">
