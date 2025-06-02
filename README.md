@@ -27,10 +27,10 @@ Com MiauMigo, cada compra vai além do carinho — é também um gesto de amor e
 
 |  |  |
 |----------|-----------|
-| [🦴 Descrição](#-🦴-descrição) | [👥 Integrantes](#-🦴-integrantes) | 
-| [🎯 Objetivo](#-objetivo) | [🌟 Diferenciais](#-🦔-🦎-diferenciais) |
-| [🛠️ Como Usar](#-como-usar) | [🎥 Demo](#-demo) |
-| [🖼️ Tela de Demonstração](#-tela-de-demonstracão) | [🧪 Tecnologias Utilizadas](#-tecnologias-utilizadas) |
+| [🦴 Descrição](#-descrição) | [🖼️ Tela de Demonstração](#-tela-de-demonstracão) | 
+| [🎯 Objetivo](#-objetivo) | [🧪 Tecnologias Utilizadas](#-tecnologias-utilizadas) |
+|[🌟 Diferenciais](#-diferenciais) | [👥 Integrantes](#-integrantes) |
+|[🎥 Demo](#-demo)  |  |
 |
 
 </div>
