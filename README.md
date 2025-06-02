@@ -81,8 +81,6 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
 <table style="border-spacing: 8px; width: 100%;">
   <tr>
     <th style="text-align: center; vertical-align: top; padding-bottom: 8px;">🏠 Home</th>
-    <th style="text-align: center; vertical-align: top; padding-bottom: 8px;">🔐 Login</th>
-    <th style="text-align: center; vertical-align: top; padding-bottom: 8px;">🛒 Produtos</th>
   </tr>
   <tr>
     <td style="vertical-align: top; padding: 0;">
@@ -90,22 +88,6 @@ O grande diferencial? Parte dos lucros 💰 é destinada ao apoio de ONGs de res
       <img src="./public/Readme/print_home4.png" style="display: block; margin: 0; padding: 0; width: 100%;" alt="Home 2" />
       <img src="./public/Readme/print_home1.png" style="display: block; margin: 0; padding: 0; width: 100%;" alt="Home 3" />
       <img src="./public/Readme/print_home5.png" style="display: block; margin: 0; padding: 0; width: 100%;" alt="Home 4" />
-    </td>
-    <td style="vertical-align: top; padding: 0 8px;">
-      <p style="margin: 4px 0; font-weight: bold;">Login geral</p>
-      <img src="./public/Readme/login.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Login" />
-      <p style="margin: 4px 0; font-weight: bold;">Login para cliente</p>
-      <img src="./public/Readme/clienteLog.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Login Cliente" />
-      <p style="margin: 4px 0; font-weight: bold;">Login para vendedor</p>
-      <img src="./public/Readme/vendedorLog.png" style="display: block; width: 100%;" alt="Login Vendedor" />
-    </td>
-    <td style="vertical-align: top; padding: 0;">
-      <p style="margin: 4px 0; font-weight: bold;">Tela dos produtos</p>
-      <img src="./public/Readme/Shop.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Produtos" />
-      <p style="margin: 4px 0; font-weight: bold;">Detalhes do produto</p>
-      <img src="./public/Readme/ShopDet.png" style="display: block; width: 100%; margin-bottom: 12px;" alt="Detalhes Produto" />
-      <p style="margin: 4px 0; font-weight: bold;">Tela de perfil do vendedor</p>
-      <img src="./public/Readme/perfil.png" style="display: block; width: 100%;" alt="Perfil Vendedor" />
     </td>
   </tr>
 </table>
